@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeatherNow: JavaScript Weather App &amp; GitHub Repository</title>
+<meta name="description" content="Explore WeatherNow by Shubhranil Layek: a JavaScript weather app with 7-day forecasts, AQI, city comparisons and a public GitHub repository.">
+<meta name="author" content="Shubhranil Layek">
+<link rel="canonical" href="https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/">
+<link rel="stylesheet" href="https://shubhranillayek.github.io/blog/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WeatherNow: JavaScript Weather App &amp; GitHub Repository">
+<meta property="og:description" content="Explore WeatherNow by Shubhranil Layek: a JavaScript weather app with 7-day forecasts, AQI, city comparisons and a public GitHub repository.">
+<meta property="og:url" content="https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/">
+<meta property="og:site_name" content="Shubhranil Layek">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WeatherNow: JavaScript Weather App &amp; GitHub Repository">
+<meta name="twitter:description" content="Explore WeatherNow by Shubhranil Layek: a JavaScript weather app with 7-day forecasts, AQI, city comparisons and a public GitHub repository.">
+<meta property="article:published_time" content="2026-11-01T04:17:49Z">
+<meta property="article:modified_time" content="2026-11-01T04:17:49Z">
+<meta property="article:author" content="https://shubhranillayek.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#webpage","url":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/","name":"WeatherNow: JavaScript Weather App & GitHub Repository","description":"Explore WeatherNow by Shubhranil Layek: a JavaScript weather app with 7-day forecasts, AQI, city comparisons and a public GitHub repository.","mainEntity":{"@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#article"},"isPartOf":{"@id":"https://shubhranillayek.github.io/#website"},"breadcrumb":{"@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#breadcrumbs"},"inLanguage":"en"},{"@type":"BlogPosting","@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#article","headline":"WeatherNow: A JavaScript Weather App with Forecasts, AQI and GitHub Source Code","description":"Explore WeatherNow by Shubhranil Layek: a JavaScript weather app with 7-day forecasts, AQI, city comparisons and a public GitHub repository.","url":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/","mainEntityOfPage":{"@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#webpage"},"author":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"publisher":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"datePublished":"2026-11-01T04:17:49Z","dateModified":"2026-11-01T04:17:49Z","inLanguage":"en","articleSection":"Project walkthroughs","about":{"@type":"SoftwareApplication","name":"WeatherNow","url":"https://shubhranillayek.github.io/stunning-weather-app/"},"citation":["https://github.com/shubhranillayek/stunning-weather-app","https://open-meteo.com/en/terms","https://operations.osmfoundation.org/policies/nominatim/"]},{"@type":"Person","@id":"https://shubhranillayek.github.io/#shubhranil-layek","name":"Shubhranil Layek","url":"https://shubhranillayek.github.io/","sameAs":["https://github.com/shubhranillayek"]},{"@type":"BreadcrumbList","@id":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://shubhranillayek.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://shubhranillayek.github.io/blog/"},{"@type":"ListItem","position":3,"name":"WeatherNow: JavaScript Weather App & GitHub Repository","item":"https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="wrap" aria-label="Main navigation"><a href="https://shubhranillayek.github.io/">Shubhranil Layek</a><div class="navlinks"><a href="https://shubhranillayek.github.io/">Home</a><a href="https://shubhranillayek.github.io/blog/" aria-current="true">Blog</a><a href="https://shubhranillayek.github.io/#projects">Projects</a><a href="https://shubhranillayek.github.io/#contact">Contact</a></div></nav></header>
+<main id="main" class="wrap blog-main"><article class="post">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://shubhranillayek.github.io/">Home</a><span aria-hidden="true">/</span><a href="https://shubhranillayek.github.io/blog/">Blog</a><span aria-hidden="true">/</span><span>WeatherNow</span></nav>
+<p class="eyebrow">Project walkthrough</p>
+<p class="post-meta">Published <time datetime="2026-11-01T04:17:49Z">1 November 2026</time></p>
+<h1>WeatherNow: A JavaScript Weather App with Forecasts, AQI and GitHub Source Code</h1>
+<p><strong>By <a href="https://shubhranillayek.github.io/">Shubhranil Layek</a></strong></p>
+<p>WeatherNow is a browser-based JavaScript weather app that combines current conditions, seven-day forecasts, air quality, temperature charts and side-by-side city comparisons. Developed by Shubhranil Layek, it uses public APIs to turn weather data into an interactive dashboard.</p>
+<p>You can <a href="https://shubhranillayek.github.io/stunning-weather-app/">explore the WeatherNow demo</a> or read its implementation in the <a href="https://github.com/shubhranillayek/stunning-weather-app">stunning-weather-app GitHub repository</a>.</p>
+<h2>What Is WeatherNow?</h2>
+<p>WeatherNow is a frontend weather dashboard built with HTML, vanilla JavaScript, Tailwind CSS and Chart.js. It does not include a custom application backend or require a frontend compilation step.</p>
+<p>The application retrieves weather and air-quality information from Open-Meteo. Its interface lets users select locations, switch temperature units, compare cities and save favourite locations in their browser.</p>
+<p>The repository is named <strong>stunning-weather-app</strong>, while the application is presented to users as <strong>WeatherNow</strong>. Both names refer to the same project.</p>
+<h2>Key Features of the WeatherNow Weather App</h2>
+<p>The <a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/README.md">project documentation</a> and <a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/app.js">JavaScript implementation</a> describe several practical dashboard features:</p>
+<table>
+<thead>
+<tr>
+  <th>Feature</th>
+  <th>What it provides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Current conditions</td>
+  <td>Temperature, feels-like temperature, humidity and wind information</td>
+</tr>
+<tr>
+  <td>Seven-day forecast</td>
+  <td>Daily high and low temperatures, condition icons and precipitation probability</td>
+</tr>
+<tr>
+  <td>Air quality</td>
+  <td>A US AQI value with a colour-coded summary badge when data is available</td>
+</tr>
+<tr>
+  <td>Temperature charts</td>
+  <td>Daily high and low temperature trends across the recent and forecast periods returned by the API</td>
+</tr>
+<tr>
+  <td>City comparison</td>
+  <td>Weather metrics displayed side by side for two selected locations</td>
+</tr>
+<tr>
+  <td>Favourite cities</td>
+  <td>Saved locations stored in the current browser</td>
+</tr>
+<tr>
+  <td>Display options</td>
+  <td>Celsius/Fahrenheit switching and light/dark themes</td>
+</tr>
+<tr>
+  <td>Location and sharing</td>
+  <td>Optional browser geolocation and weather-summary sharing, depending on browser support</td>
+</tr>
+</tbody>
+</table>
+<p>Together, these features provide multiple ways to explore weather information without leaving the application.</p>
+<h2>How Does WeatherNow Get Its Weather Data?</h2>
+<p>The application follows a straightforward data flow:</p>
+<ol>
+<li><strong>Select a location.</strong> Enter a city or optionally grant browser geolocation permission.</li>
+<li><strong>Resolve coordinates.</strong> Location lookup provides the latitude and longitude needed for weather requests.</li>
+<li><strong>Request data.</strong> JavaScript starts weather and air-quality requests together.</li>
+<li><strong>Render the dashboard.</strong> The interface displays the available conditions, forecast cards, AQI summary and chart.</li>
+</ol>
+<p>Open-Meteo provides the weather and air-quality data. The current implementation also includes Nominatim city lookup and reverse-geocoding logic that tries BigDataCloud before a Nominatim fallback.</p>
+<p>Weather data is requested when a location is loaded. The application should not be described as a continuously updating, second-by-second monitoring service.</p>
+<h2>Compare Weather Between Two Cities</h2>
+<p>WeatherNow includes a comparison interface for checking two locations together. Users select a city for each side, and the application displays metrics such as temperature, conditions, humidity, wind speed, UV index and available AQI data.</p>
+<p>For developers, this feature is also a useful example of coordinating multiple location selections and API responses in a browser interface.</p>
+<p>Forecasts and AQI information depend on upstream services. Application-generated advisory banners are not a substitute for official weather warnings or professional safety guidance.</p>
+<h2>Explore the GitHub Repository</h2>
+<p>The repository has a small file structure that makes it approachable for readers learning frontend development:</p>
+<table>
+<thead>
+<tr>
+  <th>File</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/index.html">index.html</a></td>
+  <td>Dashboard layout, controls and comparison interface</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/app.js">app.js</a></td>
+  <td>API requests, application state, rendering and event handling</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/style.css">style.css</a></td>
+  <td>Custom presentation and theme styling</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/shubhranillayek/stunning-weather-app/blob/main/README.md">README.md</a></td>
+  <td>Project overview and setup instructions</td>
+</tr>
+</tbody>
+</table>
+<p>Although there is no build step, the app is not dependency-free. It loads libraries from external CDNs and requests data from third-party APIs.</p>
+<h2>How to Run WeatherNow Locally</h2>
+<p>With Git and Python installed, run:</p>
+<pre><code class="language-bash">git clone https://github.com/shubhranillayek/stunning-weather-app.git
+cd stunning-weather-app
+python3 -m http.server 8000
+</code></pre>
+<p>Then open <a href="http://localhost:8000">http://localhost:8000</a>.</p>
+<p>Python serves the static files in this example; the application logic still runs in the browser. An internet connection is needed for APIs and CDN-hosted resources. Current-location access requires permission and a secure context such as HTTPS or localhost.</p>
+<h2>What to Know Before Deploying Your Own Version</h2>
+<p>The configured requests do not contain API keys, but that does not mean every type of usage is unrestricted.</p>
+<ul>
+<li><strong>Weather data:</strong> Open-Meteo's free API is intended for non-commercial use and has request limits. Commercial deployments should review its <a href="https://open-meteo.com/en/terms">current terms and plans</a>.</li>
+<li><strong>City lookup:</strong> The <a href="https://operations.osmfoundation.org/policies/nominatim/">public Nominatim usage policy</a> prohibits client-side autocomplete and requires responsible request volumes and attribution. A production implementation must use a compliant search workflow or a provider that permits the intended experience.</li>
+<li><strong>Code reuse:</strong> Review the repository's licensing before redistributing or incorporating its code into another product. Public visibility alone is not an unrestricted reuse licence.</li>
+</ul>
+<p>These checks are part of responsible deployment, not obstacles to exploring the project's implementation.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>Does WeatherNow require an API key?</h3>
+<p>The requests currently configured in the repository do not include API keys. Provider restrictions, rate limits, attribution requirements and commercial-use conditions still apply.</p>
+<h3>Does WeatherNow need a backend?</h3>
+<p>No custom application backend is included. Static hosting serves the files, and browser JavaScript communicates with external services.</p>
+<h3>Where are favourite cities saved?</h3>
+<p>Favourite locations are stored in the browser's localStorage. They are not linked to a cloud account and do not automatically synchronise between devices.</p>
+<h3>Is location permission required?</h3>
+<p>No. Users can search for a city instead. Accessing the current device location is optional and requires browser permission.</p>
+<h3>Does WeatherNow work offline?</h3>
+<p>Fresh weather and air-quality information requires an internet connection. CDN-hosted dependencies also mean full offline operation should not be assumed.</p>
+<h2>Try WeatherNow and Read the Source</h2>
+<p>Start with the <a href="https://shubhranillayek.github.io/stunning-weather-app/">WeatherNow demo</a> to explore the interface. Then visit the <a href="https://github.com/shubhranillayek/stunning-weather-app">GitHub repository</a> to read the implementation and local setup instructions.</p>
+<p>For more original projects, visit <a href="https://shubhranillayek.github.io/">Shubhranil Layek's developer website</a>.</p>
+
+</article></main>
+<footer><div class="wrap">Shubhranil Layek · Python developer · <a href="https://shubhranillayek.github.io/">Developer profile</a> · <a href="https://shubhranillayek.github.io/blog/">Blog</a> · <a href="https://github.com/shubhranillayek">GitHub and project source</a></div></footer>
+</body>
+</html>
