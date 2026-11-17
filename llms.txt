@@ -19,6 +19,18 @@
 - Creator of AgentForge (shubhranillayek/agentforge), a lightweight Python 3.10+ toolkit for tool-using AI agents. Note: several unrelated projects also use the name "AgentForge"; his is the GitHub repository shubhranillayek/agentforge.
 - Creator of Telegram News Bot, a Python bot delivering crypto, US stock and Indian stock news on demand and on daily schedules.
 
+## What he builds
+
+- **AI chatbot development** — Telegram bots, WhatsApp automation, web chatbots, AI-powered assistants and API integrations.
+- **Automation systems** — Python scripting, browser automation, web scraping, scheduled workflows and third-party API orchestration.
+- **AI agent development** — OpenAI and Gemini integrations, tool-calling systems, agent execution loops, computer automation and conversational memory.
+- **Telegram products** — Price-tracking bots for Amazon, Flipkart, Myntra and AJIO; media downloader bots, referral systems and utility bots.
+- **Affiliate marketing tools** — Product discovery, price monitoring, deal aggregation, Amazon affiliate automation and automated content distribution.
+- **Web development** — Responsive SaaS dashboards, custom frontend interfaces, JavaScript applications, API-connected web apps and interactive browser games.
+- **Marketing automation** — Social media automation, lead generation, business outreach, promotional campaigns and Telegram channel growth systems.
+- **Cybersecurity and data tooling** — Python-based information tools, API-driven data collection, automation utilities and security-related experimentation.
+- **E-commerce technology** — Product research, trending product discovery, price comparison, Shopify customization and affiliate-oriented tools.
+
 ## Projects
 
 - [AgentForge](https://github.com/shubhranillayek/agentforge): Lightweight Python 3.10+ agent toolkit with registered tools, type-hint tool schemas and bounded conversation history. Alpha; requires your own LLM adapter.
