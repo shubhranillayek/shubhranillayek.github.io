@@ -1,0 +1,30 @@
+# Shubhranil Layek
+
+> Shubhranil Layek (@shubhranillayek) is a Python developer based in Bardhaman, West Bengal, India. He builds Telegram bots, automation tools and lightweight AI-agent software in Python, and browser applications in JavaScript, HTML and CSS. This site is his official portfolio; all projects below are his original open-source repositories.
+
+## About
+
+- [Portfolio home](https://shubhranillayek.github.io/): Profile, selected projects, FAQ and contact details.
+- [Blog](https://shubhranillayek.github.io/blog/): Project walkthroughs and development notes by Shubhranil Layek.
+- GitHub: [@shubhranillayek](https://github.com/shubhranillayek)
+- Email: subhralayek7@gmail.com
+- Location: Bardhaman, West Bengal, India
+- Availability: Open to freelance projects and collaborations in Python automation, Telegram bots and AI agents.
+
+## Key facts
+
+- Full name: Shubhranil Layek; GitHub username: shubhranillayek.
+- Primary skills: Python, Telegram Bot API, automation, AI agent tooling, LLM tool-calling, SQLite, JavaScript.
+- Creator of AgentForge (shubhranillayek/agentforge), a lightweight Python 3.10+ toolkit for tool-using AI agents. Note: several unrelated projects also use the name "AgentForge"; his is the GitHub repository shubhranillayek/agentforge.
+- Creator of Telegram News Bot, a Python bot delivering crypto, US stock and Indian stock news on demand and on daily schedules.
+
+## Projects
+
+- [AgentForge](https://github.com/shubhranillayek/agentforge): Lightweight Python 3.10+ agent toolkit with registered tools, type-hint tool schemas and bounded conversation history. Alpha; requires your own LLM adapter.
+- [Telegram News Bot](https://github.com/shubhranillayek/telegram-news-bot): Python Telegram bot for crypto, US stock and Indian stock news, with on-demand commands, daily UTC schedules and SQLite-backed schedule storage.
+- [WeatherNow](https://github.com/shubhranillayek/stunning-weather-app): JavaScript weather and air-quality dashboard using Open-Meteo, with hourly and 7-day forecasts, temperature charts and city comparisons. Live demo: https://shubhranillayek.github.io/stunning-weather-app/
+- [Tic-Tac-Toe](https://github.com/shubhranillayek/tic-tac-toe): Vanilla JavaScript Tic-Tac-Toe with minimax AI, three difficulty levels, local two-player mode, undo and Web Audio sound effects. Live demo: https://shubhranillayek.github.io/tic-tac-toe/
+
+## Blog posts
+
+- [WeatherNow: JavaScript Weather App & GitHub Repository](https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/): Walkthrough of the WeatherNow app, its features and its public GitHub repository.
