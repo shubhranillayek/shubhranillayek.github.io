@@ -91,3 +91,27 @@ footer a{color:var(--ink)}
 .blog-intro{max-width:750px;color:var(--muted)}
 .navlinks a[aria-current]{text-decoration:underline;text-decoration-color:var(--clay)}
 @media(max-width:680px){.blog-main{padding-top:32px}.post h2{font-size:1.55rem}.post th,.post td{padding:10px}}
+
+:root[data-theme="dark"]{
+  --paper:#1f1e1b;
+  --panel:#292825;
+  --ink:#f5f4ee;
+  --muted:#a6a29a;
+  --line:#3b3a35;
+  --line-strong:#6e6a61;
+  --clay-dark:#e08a6a;
+  --charcoal:#d8d5cc;
+  color-scheme:dark;
+}
+.theme-switch{flex:none;width:54px;height:30px;padding:0;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel);cursor:pointer;position:relative;vertical-align:middle;transition:background-color .3s ease,border-color .3s ease}
+.theme-switch:focus-visible{outline:3px solid var(--clay-dark);outline-offset:3px}
+.theme-switch .ts-knob{position:absolute;top:50%;left:3px;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--ink);transition:transform .38s cubic-bezier(.55,.06,.25,1.15),background-color .3s ease}
+:root[data-theme="dark"] .theme-switch .ts-knob{transform:translateX(24px);background:var(--clay)}
+.theme-switch svg{position:absolute;top:50%;left:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:opacity .25s ease,transform .38s ease}
+.theme-switch .ts-moon{stroke:var(--paper);opacity:1;transform:rotate(0deg) scale(1)}
+.theme-switch .ts-sun{stroke:#1f1e1b;opacity:0;transform:rotate(90deg) scale(.4)}
+:root[data-theme="dark"] .theme-switch .ts-moon{opacity:0;transform:rotate(-90deg) scale(.4)}
+:root[data-theme="dark"] .theme-switch .ts-sun{opacity:1;transform:rotate(0deg) scale(1)}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+html.theming,html.theming *,html.theming *::before,html.theming *::after{transition:background-color .45s ease,color .45s ease,border-color .45s ease!important}
+@media(prefers-reduced-motion:reduce){.theme-switch .ts-knob,.theme-switch svg{transition:none}}
