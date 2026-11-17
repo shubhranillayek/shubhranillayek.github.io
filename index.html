@@ -375,9 +375,9 @@ footer a{color:var(--ink)}
 }
 .theme-switch{flex:none;width:54px;height:30px;padding:0;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel);cursor:pointer;position:relative;vertical-align:middle;transition:background-color .3s ease,border-color .3s ease}
 .theme-switch:focus-visible{outline:3px solid var(--clay-dark);outline-offset:3px}
-.theme-switch .ts-knob{position:absolute;top:50%;left:3px;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--ink);transition:transform .38s cubic-bezier(.55,.06,.25,1.15),background-color .3s ease}
+.theme-switch .ts-knob{position:absolute;top:50%;left:3px;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--ink);transition:transform .45s cubic-bezier(.55,.06,.25,1.15),background-color .3s ease}
 :root[data-theme="dark"] .theme-switch .ts-knob{transform:translateX(24px);background:var(--clay)}
-.theme-switch svg{position:absolute;top:50%;left:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:opacity .25s ease,transform .38s ease}
+.theme-switch svg{position:absolute;top:50%;left:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:opacity .25s ease,transform .45s ease}
 .theme-switch .ts-moon{stroke:var(--paper);opacity:1;transform:rotate(0deg) scale(1)}
 .theme-switch .ts-sun{stroke:#1f1e1b;opacity:0;transform:rotate(90deg) scale(.4)}
 :root[data-theme="dark"] .theme-switch .ts-moon{opacity:0;transform:rotate(-90deg) scale(.4)}
@@ -427,7 +427,7 @@ html.theming,html.theming *,html.theming *::before,html.theming *::after{transit
       vt.ready.then(function(){
         root.animate(
           {clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},
-          {duration:550,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
+          {duration:750,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
         );
       }).catch(function(){});
     }else{
