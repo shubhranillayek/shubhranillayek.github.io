@@ -203,7 +203,7 @@ python3 -m http.server 8000
       vt.ready.then(function(){
         root.animate(
           {clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},
-          {duration:550,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
+          {duration:750,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
         );
       }).catch(function(){});
     }else{
