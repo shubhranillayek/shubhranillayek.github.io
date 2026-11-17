@@ -1,6 +1,6 @@
 # Shubhranil Layek
 
-> Shubhranil Layek (@shubhranillayek) is a Python developer based in Bardhaman, West Bengal, India. He builds Telegram bots, automation tools and lightweight AI-agent software in Python, and browser applications in JavaScript, HTML and CSS. This site is his official portfolio; all projects below are his original open-source repositories.
+> Shubhranil Layek (@shubhranillayek) is a Python developer based in Durgapur, West Bengal, India. He builds Telegram bots, automation tools and lightweight AI-agent software in Python, and browser applications in JavaScript, HTML and CSS. This site is his official portfolio; all projects below are his original open-source repositories.
 
 ## About
 
@@ -8,7 +8,7 @@
 - [Blog](https://shubhranillayek.github.io/blog/): Project walkthroughs and development notes by Shubhranil Layek.
 - GitHub: [@shubhranillayek](https://github.com/shubhranillayek)
 - Email: subhralayek7@gmail.com
-- Location: Bardhaman, West Bengal, India
+- Location: Durgapur, West Bengal, India
 - Availability: Open to freelance projects and collaborations in Python automation, Telegram bots and AI agents.
 
 ## Key facts
