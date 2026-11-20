@@ -10,12 +10,13 @@
 - Instagram: [@nil.pyc](https://www.instagram.com/nil.pyc/)
 - Email: subhralayek7@gmail.com
 - Location: Durgapur, West Bengal, India
+- Education: BCA final-year student at Bengal College of Engineering and Technology (BCET), Durgapur; graduating July 2027. Building software for 2-3 years through self-built projects.
 - Availability: Open to freelance projects and collaborations in Python automation, Telegram bots and AI agents.
 
 ## Key facts
 
 - Full name: Shubhranil Layek; GitHub username: shubhranillayek.
-- Primary skills: Python, Telegram Bot API, automation, AI agent tooling, LLM tool-calling, SQLite, JavaScript.
+- Primary skills: Python, Telegram bots, Telegram Bot API, Automation, AI agent tooling, LLM tool-calling, SQLite, JavaScript, AI chatbots, WhatsApp automation, Web chatbots, Web scraping, Browser automation, OpenAI, Gemini, Price-tracking bots, Affiliate marketing tools, SaaS dashboards, Marketing automation, Shopify, E-commerce tools.
 - Creator of AgentForge (shubhranillayek/agentforge), a lightweight Python 3.10+ toolkit for tool-using AI agents. Note: several unrelated projects also use the name "AgentForge"; his is the GitHub repository shubhranillayek/agentforge.
 - Creator of Telegram News Bot, a Python bot delivering crypto, US stock and Indian stock news on demand and on daily schedules.
 
@@ -31,10 +32,18 @@
 - **Cybersecurity and data tooling** — Python-based information tools, API-driven data collection, automation utilities and security-related experimentation.
 - **E-commerce technology** — Product research, trending product discovery, price comparison, Shopify customization and affiliate-oriented tools.
 
+## Work with me
+
+- [Work with me](https://shubhranillayek.github.io/#work-with-me): Freelance services, how a project runs and contact details.
+- Services: Telegram bots, automation tools, AI agents and small web apps.
+- How it works: 1. Tell me what you need. 2. I share a plan and timeline. 3. I build it. 4. Delivery and support.
+- Contact: Email subhralayek7@gmail.com about your project.
+
 ## Projects
 
 - [AgentForge](https://github.com/shubhranillayek/agentforge): Lightweight Python 3.10+ agent toolkit with registered tools, type-hint tool schemas and bounded conversation history. Alpha; requires your own LLM adapter.
 - [Telegram News Bot](https://github.com/shubhranillayek/telegram-news-bot): Python Telegram bot for crypto, US stock and Indian stock news, with on-demand commands, daily UTC schedules and SQLite-backed schedule storage.
+- [Telegram Gemini Chatbot](https://github.com/shubhranillayek/telegram-gemini-chatbot): An n8n workflow (no code) that connects Telegram to Google Gemini (AI Studio): you message the bot, Gemini answers, and the reply comes back on Telegram. Import it into n8n, add a BotFather token and a free Gemini API key, and switch it on.
 - [WeatherNow](https://github.com/shubhranillayek/stunning-weather-app): JavaScript weather and air-quality dashboard using Open-Meteo, with hourly and 7-day forecasts, temperature charts and city comparisons. Live demo: https://shubhranillayek.github.io/stunning-weather-app/
 - [Tic-Tac-Toe](https://github.com/shubhranillayek/tic-tac-toe): Vanilla JavaScript Tic-Tac-Toe with minimax AI, three difficulty levels, local two-player mode, undo and Web Audio sound effects. Live demo: https://shubhranillayek.github.io/tic-tac-toe/
 
@@ -42,3 +51,13 @@
 
 - [WeatherNow: JavaScript Weather App & GitHub Repository](https://shubhranillayek.github.io/blog/weathernow-javascript-weather-app-github/): Walkthrough of the WeatherNow app, its features and its public GitHub repository.
 - [How to Build a Telegram Bot with Python: Step-by-Step Guide](https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/): Step-by-step tutorial on building a Telegram chatbot with BotFather and python-telegram-bot, from the first command and buttons to keeping the bot running on a server.
+- [How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide](https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/): Step-by-step tutorial on building a Telegram chatbot with Google AI Studio (Gemini) in n8n: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.
+
+## FAQ
+
+- **Who is Shubhranil Layek?** The Python developer behind the GitHub account @shubhranillayek, with original projects in Telegram automation, AI-agent tooling and browser apps.
+- **Which project demonstrates Telegram bot automation?** Telegram News Bot, which supports news commands and daily UTC schedules with SQLite-backed schedule storage.
+- **Which AgentForge is his?** shubhranillayek/agentforge, a Python 3.10+ toolkit currently classified as alpha. Other projects also use the AgentForge name; you supply your own LLM adapter, and it is not a hosted AI service.
+- **Where can I try the web applications?** WeatherNow for weather and air-quality views, or Tic-Tac-Toe against minimax AI or a second player on one device.
+- **Where is Shubhranil Layek based?** Durgapur, West Bengal, India. He builds open-source projects and client work remotely.
+- **Is Shubhranil Layek available for freelance work?** Yes. He is open to freelance projects and collaborations involving Python automation, Telegram bots and AI agents. The fastest way to reach him is via GitHub (@shubhranillayek) or email at subhralayek7@gmail.com.
