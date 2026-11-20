@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-58JBLZEBJY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-58JBLZEBJY');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="light";}})();</script>
+<meta name="theme-color" content="#faf9f5">
+<title>How to Build a Telegram Bot with Python: Step-by-Step Guide</title>
+<meta name="description" content="How to build a Telegram bot with Python, step by step for beginners: install Python, create your bot with BotFather, add buttons and typed answers with python-telegram-bot, and keep it online.">
+<meta name="author" content="Shubhranil Layek">
+<link rel="canonical" href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">
+<link rel="stylesheet" href="https://shubhranillayek.github.io/blog/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Build a Telegram Bot with Python: Step-by-Step Guide">
+<meta property="og:description" content="How to build a Telegram bot with Python, step by step for beginners: install Python, create your bot with BotFather, add buttons and typed answers with python-telegram-bot, and keep it online.">
+<meta property="og:url" content="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">
+<meta property="og:site_name" content="Shubhranil Layek">
+<meta property="og:image" content="https://shubhranillayek.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Build a Telegram Bot with Python — Shubhranil Layek">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://shubhranillayek.github.io/og-image.png">
+<meta name="twitter:image:alt" content="How to Build a Telegram Bot with Python — Shubhranil Layek">
+<meta name="twitter:title" content="How to Build a Telegram Bot with Python: Step-by-Step Guide">
+<meta name="twitter:description" content="How to build a Telegram bot with Python, step by step for beginners: install Python, create your bot with BotFather, add buttons and typed answers with python-telegram-bot, and keep it online.">
+<meta property="article:published_time" content="2026-11-20T02:05:00Z">
+<meta property="article:modified_time" content="2026-11-20T02:07:42Z">
+<meta property="article:author" content="https://shubhranillayek.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#webpage","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/","name":"How to Build a Telegram Bot with Python: Step-by-Step Guide","description":"How to build a Telegram bot with Python, step by step for beginners: install Python, create your bot with BotFather, add buttons and typed answers with python-telegram-bot, and keep it online.","mainEntity":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#article"},"isPartOf":{"@id":"https://shubhranillayek.github.io/#website"},"breadcrumb":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#breadcrumbs"},"inLanguage":"en"},{"@type":"BlogPosting","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#article","headline":"How to Build a Telegram Bot with Python: A Step-by-Step Guide","description":"How to build a Telegram bot with Python, step by step for beginners: install Python, create your bot with BotFather, add buttons and typed answers with python-telegram-bot, and keep it online.","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/","mainEntityOfPage":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#webpage"},"author":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"publisher":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"datePublished":"2026-11-20T02:05:00Z","dateModified":"2026-11-20T02:07:42Z","inLanguage":"en","articleSection":"Tutorials","about":{"@type":"SoftwareApplication","name":"Telegram News Bot","url":"https://github.com/shubhranillayek/telegram-news-bot"},"citation":["https://github.com/shubhranillayek/telegram-news-bot","https://core.telegram.org/bots","https://docs.python-telegram-bot.org/"]},{"@type":"Person","@id":"https://shubhranillayek.github.io/#shubhranil-layek","name":"Shubhranil Layek","url":"https://shubhranillayek.github.io/","sameAs":["https://github.com/shubhranillayek"]},{"@type":"BreadcrumbList","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://shubhranillayek.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://shubhranillayek.github.io/blog/"},{"@type":"ListItem","position":3,"name":"How to Build a Telegram Bot with Python: Step-by-Step Guide","item":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="wrap" aria-label="Main navigation"><a href="https://shubhranillayek.github.io/">Shubhranil Layek</a><div class="navlinks"><a href="https://shubhranillayek.github.io/">Home</a><a href="https://shubhranillayek.github.io/blog/" aria-current="true">Blog</a><a href="https://shubhranillayek.github.io/#projects">Projects</a><a href="https://shubhranillayek.github.io/#contact">Contact</a><button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Toggle dark mode"><span class="ts-knob"><svg class="ts-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ts-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></button></div></nav></header>
+<main id="main" class="wrap blog-main"><article class="post">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://shubhranillayek.github.io/">Home</a><span aria-hidden="true">/</span><a href="https://shubhranillayek.github.io/blog/">Blog</a><span aria-hidden="true">/</span><span>Telegram Bot with Python</span></nav>
+<p class="eyebrow">Tutorial</p>
+<p class="post-meta">Published <time datetime="2026-11-20T02:05:00Z">20 November 2026</time></p>
+<h1>How to Build a Telegram Bot with Python: A Step-by-Step Guide</h1>
+<p><strong>By <a href="https://shubhranillayek.github.io/">Shubhranil Layek</a></strong></p>
+<p>A Telegram bot is a program that talks to people inside Telegram. Shops, tutors and small teams use them to answer common questions, send alerts and collect orders, and they are simpler to build than most people expect. You do not need any coding experience to follow this telegram bot tutorial: it starts from zero — what a bot is, how to install Python, what a terminal is — and by the end you will have a small working chatbot of your own, in about an hour. If you'd rather not build it yourself, I can build the bot for you — for your business or a personal project — and there's a note about that at the end of this guide.</p>
+<p>This guide builds one from an empty folder: a small FAQ bot that answers questions about opening hours, location, services and contact details. It responds to commands, shows tappable buttons and understands a few typed questions. The same steps, with more handlers and a database behind them, are how I built my <a href="https://github.com/shubhranillayek/telegram-news-bot">Telegram News Bot</a>, which you can also find in <a href="https://shubhranillayek.github.io/#projects">the projects section of this site</a>.</p>
+<figure style="margin:1.6rem 0"><img src="telegram-bot-python-header.png" alt="Guide header for How to Build a Telegram Bot with Python, showing a Python code snippet and a short sample chat with a bot" width="1200" height="630" style="max-width:100%;height:auto;border-radius:10px"></figure>
+<h2>Start Here: Telegram Bot Basics for Complete Beginners</h2>
+<p>If today is your first day with anything like this, read this part first. It takes about five minutes, and everything after it will make sense. If you already write Python, skip straight to <a href="#step-1">Step 1</a>.</p>
+<h3>What is a Telegram bot?</h3>
+<p>A Telegram bot is a program that lives inside Telegram and chats with people like a contact does. Someone opens a chat with it, sends a message or taps a button, and the program answers — instantly, at any hour, with nobody sitting there. Think of the assistant on a shop's number: you type "timings" and it replies with the opening hours. That is all a bot is. In this guide you will build a Telegram bot yourself, in Python, and Telegram will deliver the messages between you and it.</p>
+<h3>Install Python on your computer</h3>
+<p>Python is the language we will write the bot in — instructions for the computer, written in something close to plain English. It is free, and you need version 3.10 or newer.</p>
+<ul>
+<li><strong>Windows:</strong> go to <a href="https://www.python.org/downloads/">python.org/downloads</a>, download Python and run the installer. On the very first screen, tick the box that says <strong>Add python.exe to PATH</strong> before you click Install. This one checkbox matters. Without it, Windows cannot find Python when you type its name, and every command in this guide will fail with a "not recognized" error. If you already installed Python without ticking it, run the installer again and choose Modify, then tick the box — or uninstall and reinstall. No harm done either way.</li>
+<li><strong>Mac:</strong> download the macOS installer from the same python.org page and run it. If you use Homebrew, <code>brew install python</code> does the same job. On a Mac you will call it <code>python3</code>, not <code>python</code>.</li>
+<li><strong>Linux:</strong> Python 3 is usually already installed. If it is not, on Ubuntu or Debian run <code>sudo apt install python3 python3-venv</code>.</li>
+</ul>
+<p>Now check that it worked. Open a terminal (the next section shows how) and type <code>python --version</code> on Windows, or <code>python3 --version</code> on Mac and Linux, then press Enter. You should see something like <code>Python 3.12.4</code>. A version number means you are ready. An error almost always means the Windows PATH checkbox above was missed — on Windows you can also try <code>py --version</code>, because Windows installs a small <code>py</code> launcher that works even when <code>python</code> does not.</p>
+<h3>Open a terminal (command prompt)</h3>
+<p>A terminal — also called the command prompt or console — is a window where you give the computer instructions by typing instead of clicking. Every grey box of commands in this guide happens in a terminal. It looks bare, but you only need a handful of commands, and each one is explained where it appears.</p>
+<ul>
+<li><strong>Windows:</strong> press the Start key, type <code>terminal</code> or <code>cmd</code>, and open Windows Terminal or Command Prompt. PowerShell works too.</li>
+<li><strong>Mac:</strong> press Cmd+Space, type <code>Terminal</code>, and press Enter.</li>
+<li><strong>Linux:</strong> press Ctrl+Alt+T, or find Terminal in your applications.</li>
+</ul>
+<p>One habit to learn now: when a command runs a program — your bot, later — the terminal stays busy until you stop the program with <code>Ctrl+C</code>. That is normal. It is not a freeze.</p>
+<h3>Get a text editor for writing code</h3>
+<p>Code is written in a text editor, not in Word or Google Docs — those add hidden formatting that breaks programs. If you do not have one, install <a href="https://code.visualstudio.com/">VS Code</a>: it is free and works on Windows, Mac and Linux. Notepad on Windows or TextEdit on a Mac (set to plain text) are fine for this guide too. One warning that saves real pain: when you save a file named <code>bot.py</code> or <code>.env</code>, make sure the editor does not quietly add <code>.txt</code> to the end. If the save window has a "Save as type" or format option, choose "All files".</p>
+<h2>What You Need</h2>
+<ul>
+<li>A Telegram account, to create the bot through BotFather</li>
+<li>Python 3.10 or newer — the section above shows how to install it</li>
+<li>A text editor — VS Code, Notepad or TextEdit, as covered above</li>
+<li>About an hour of free time</li>
+</ul>
+<p>No server and no payment are needed to follow along. The bot runs on your own computer while you build it; keeping it online afterwards is covered in the last step.</p>
+<h2 id="step-1">Step 1: Create a Telegram Bot with BotFather</h2>
+<p>Every Telegram bot is registered through BotFather, Telegram's own official bot that creates and manages other bots. You talk to it like a person, and at the end it hands you a token. Here is how to create a Telegram bot with it, click by click:</p>
+<ol>
+<li>Open Telegram and search for <strong>BotFather</strong>. Pick the result with the blue verified tick — its username is exactly <a href="https://t.me/BotFather">@BotFather</a>. Similar names exist, and they are not the real one.</li>
+<li>Press <strong>Start</strong> (or send <code>/start</code>). BotFather replies with a list of commands.</li>
+<li>Send the command <code>/newbot</code>. BotFather asks for a name first.</li>
+<li>Send a <strong>display name</strong> — the friendly name people will see at the top of the chat, like <em>FAQ Bot</em> or <em>Sharma Store Helper</em>. Spaces and capital letters are fine, and you can change it later.</li>
+<li>Now BotFather asks for a <strong>username</strong>, and this one is different. The username is the bot's permanent address, like an Instagram handle, and it follows three rules: it must be unique (no other bot can already have it), it can only contain letters, numbers and underscores, and it must end in the word <code>bot</code> — for example <code>my_sample_faq_bot</code> or <code>SharmaStoreBot</code>. If your choice is taken, BotFather says so and you simply try another. Unlike the display name, the username can never be changed later, so pick one you are happy with.</li>
+<li>BotFather replies with a congratulations message and your <strong>token</strong>: a long string that looks like <code>123456789:AAE...</code>. That token is the most important thing in this guide.</li>
+</ol>
+<p>So what is the token? It is your bot's password. Your program shows this token to Telegram to prove "I own this bot — let me read its messages and reply to them." The door your program knocks on is called the Bot API. An API is simply a fixed set of ways one program can ask another program for things, and the token is the key to that door.</p>
+<p>Because the token is a key, treat it like one. Anyone who has it controls your bot completely — they can read its messages and send anything in its name. So: never paste it into your code, never upload it to GitHub, never send it in a chat or leave it visible in a screenshot. In Step 2 you will store it in a separate file called <code>.env</code> that stays on your computer. If the token ever does leak, open BotFather, send <code>/revoke</code>, and it will cancel the old token and give you a new one; you then update your <code>.env</code> file and restart the bot. While you are in BotFather, <code>/setdescription</code> and <code>/setuserpic</code> let you add a description and a profile photo so the bot looks finished.</p>
+<h2>Step 2: Set Up the Python Project</h2>
+<p>Now the computer side. Open your terminal and create a folder where the bot will live. <code>mkdir</code> means "make directory" — it creates a folder — and <code>cd</code> moves you inside it:</p>
+<pre><code class="language-bash">mkdir faq-bot
+cd faq-bot</code></pre>
+<p>Everything for this bot goes in this one folder. Next, a virtual environment. A virtual environment is a private box inside the folder where this project's Python packages live, so they never mix with other projects. Create the box and switch it on:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate</code></pre>
+<p>On Windows, create it with <code>py -m venv .venv</code> and switch it on with <code>.venv\Scripts\activate</code>. When the box is on, your terminal prompt starts with <code>(.venv)</code>. Remember that detail — a large share of beginner errors come from this box being switched off. Every time you open a fresh terminal to work on the bot, run the activate command again before anything else.</p>
+<p>Now install the library. <code>pip</code> is Python's package installer — think of it as an app store for ready-made code that other people have written. This one command downloads <a href="https://docs.python-telegram-bot.org/">python-telegram-bot</a>, the library that does the hard work of talking to Telegram for us, plus python-dotenv, a small helper that will read your token file:</p>
+<pre><code class="language-bash">pip install python-telegram-bot python-dotenv</code></pre>
+<p>Next, the token. In your text editor, create a new file inside the <code>faq-bot</code> folder and save it with the name <code>.env</code> — exactly that, starting with a dot, nothing before or after it (choose "All files" in the save window so it does not become <code>.env.txt</code>). Put this single line in the file, with your real token after the equals sign:</p>
+<pre><code>TELEGRAM_BOT_TOKEN=123456789:AAE...</code></pre>
+<p>This <code>.env</code> file is where the token lives — outside your code, so you can show or share the code without ever exposing the bot. Never upload the <code>.env</code> file anywhere. If you later put this project on GitHub, first create a file called <code>.gitignore</code> with a line saying <code>.env</code> in it; that tells Git to leave the file out of every upload.</p>
+<p>Last, create the code file: an empty file named <code>bot.py</code> in the same folder. Every piece of code in the rest of this guide goes into that one file.</p>
+<h2>Step 3: The First Bot — /start and /help</h2>
+<p>The library works with <em>handlers</em>. A handler is a rule that says "when this kind of message arrives, run this function." You write one function per job, register it as a handler, and the library calls it at the right moment. This first version of the code gives your bot two commands: <code>/start</code> greets the user, and <code>/help</code> lists what the bot can do:</p>
+<pre><code class="language-python">import os
+
+from dotenv import load_dotenv
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+
+load_dotenv()
+
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    await update.message.reply_text(
+        &quot;Hi! I am your new bot. Send /help to see what I can do.&quot;
+    )
+
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    await update.message.reply_text(&quot;/start - say hello\n/help - show this message&quot;)
+
+
+def main() -&gt; None:
+    token = os.environ[&quot;TELEGRAM_BOT_TOKEN&quot;]
+    app = Application.builder().token(token).build()
+    app.add_handler(CommandHandler(&quot;start&quot;, start))
+    app.add_handler(CommandHandler(&quot;help&quot;, help_command))
+    app.run_polling()
+
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+<p>A few things worth noticing. The <code>async</code> and <code>await</code> words appear everywhere in this library; for now, just copy the pattern exactly — they let the bot juggle many chats at once, and you do not need to understand them deeply to use them. And <code>load_dotenv()</code> near the top reads your <code>.env</code> file, so the code can pick the token up without the token itself ever appearing in the code.</p>
+<p>Run it: type <code>python3 bot.py</code> in the terminal (on Windows, <code>python bot.py</code>) and press Enter. Open your bot in Telegram and press <strong>Start</strong>. It should greet you, and <code>/help</code> should list the commands. The last line, <code>app.run_polling()</code>, is what keeps the bot alive: polling means the program asks Telegram "any new messages for me?" every few seconds and answers the ones it finds. Leave the terminal open while you test, and press <code>Ctrl+C</code> in the terminal when you want the bot to go offline.</p>
+<p>One thing worth knowing early: a bot cannot message someone first. A user has to open the chat and press Start (or send a message) before the bot can reply. That is a Telegram rule, not a limitation of your code.</p>
+<h2>Step 4: Add Inline Keyboard Buttons</h2>
+<p>Typing commands is fine for developers, but most people would rather tap. An <em>inline keyboard</em> attaches buttons under a message. Each button carries a short <code>callback_data</code> string — a label that Telegram sends back to your bot when the button is tapped, so your code knows which topic was picked. The code below has two parts: a function that builds the keyboard, and a function that answers a tap:</p>
+<pre><code class="language-python">from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
+
+def topic_keyboard() -&gt; InlineKeyboardMarkup:
+    keyboard = [
+        [
+            InlineKeyboardButton(&quot;Opening hours&quot;, callback_data=&quot;hours&quot;),
+            InlineKeyboardButton(&quot;Location&quot;, callback_data=&quot;location&quot;),
+        ],
+        [
+            InlineKeyboardButton(&quot;Services&quot;, callback_data=&quot;services&quot;),
+            InlineKeyboardButton(&quot;Contact us&quot;, callback_data=&quot;contact&quot;),
+        ],
+    ]
+    return InlineKeyboardMarkup(keyboard)
+
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    await update.message.reply_text(
+        &quot;Hi! I can answer a few common questions. Pick a topic:&quot;,
+        reply_markup=topic_keyboard(),
+    )
+
+
+async def button_tap(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    query = update.callback_query
+    await query.answer()
+    answers = {
+        &quot;hours&quot;: &quot;We are open Monday to Saturday, 9 AM to 9 PM.&quot;,
+        &quot;location&quot;: &quot;You can find us on MG Road, Durgapur. Look us up on Google Maps for directions.&quot;,
+        &quot;services&quot;: &quot;We offer dine-in, takeaway and home delivery within the neighbourhood.&quot;,
+        &quot;contact&quot;: &quot;You can call us on 98765 43210 or email hello@example.com.&quot;,
+    }
+    await query.edit_message_text(
+        answers.get(query.data, &quot;Sorry, I do not have an answer for that yet.&quot;),
+        reply_markup=topic_keyboard(),
+    )
+
+
+# inside main(), next to the other add_handler lines:
+app.add_handler(CallbackQueryHandler(button_tap))</code></pre>
+<p>In plain words: when a button is tapped, the bot looks up the answer for that button's label and swaps the menu message for the answer, keeping the buttons attached so the user can pick another topic. Two details matter here. <code>query.answer()</code> tells Telegram the tap was received, which stops the loading spinner on the button. And <code>edit_message_text</code> replaces the menu message with the answer, then attaches the same keyboard again so the user can pick another topic without typing anything.</p>
+<h2>Step 5: Let the Bot Understand Typed Questions</h2>
+<p>Buttons cover the questions you expect. For everything else, a <code>MessageHandler</code> can read plain text messages and look for keywords. This function takes the message the user typed, checks it against a list of words, and replies with the matching answer:</p>
+<pre><code class="language-python">async def text_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    text = update.message.text.lower()
+    if &quot;hour&quot; in text or &quot;open&quot; in text:
+        answer = ANSWERS[&quot;hours&quot;]
+    elif &quot;where&quot; in text or &quot;address&quot; in text:
+        answer = ANSWERS[&quot;location&quot;]
+    elif &quot;deliver&quot; in text or &quot;service&quot; in text:
+        answer = ANSWERS[&quot;services&quot;]
+    else:
+        answer = &quot;I am not sure about that one. Try one of the topics below.&quot;
+    await update.message.reply_text(answer, reply_markup=topic_keyboard())
+
+
+# inside main():
+app.add_handler(MessageHandler(filters.TEXT &amp; ~filters.COMMAND, text_message))</code></pre>
+<p>Keyword matching is simple, and for a fixed set of questions it works well: if the word "open" or "hour" appears in the message, the bot answers with the opening hours. It is not artificial intelligence — the bot only recognises the words you listed — but for an FAQ bot that honesty is a feature. The answers are always the ones you wrote.</p>
+<p>To keep the flow tidy, the complete version below wraps these handlers in a <code>ConversationHandler</code>. A ConversationHandler is a handler that remembers which step of the chat each user is on: it remembers that a user who pressed <code>/start</code> is now in the "choosing a topic" state, routes their button taps and typed questions to the right functions, and lets <code>/cancel</code> end the conversation politely.</p>
+<figure style="margin:1.6rem 0"><img src="telegram-faq-bot-chat.png" alt="A Telegram chat with the finished FAQ bot: the user sends /start, the bot replies with buttons for opening hours, location, services and contact, and then answers a typed question about opening hours" width="820" height="1090" style="max-width:400px;width:100%;height:auto;border-radius:10px"><figcaption class="muted" style="font-size:.9rem;margin-top:.5rem">The finished bot in Telegram: topic buttons for the common questions, and a typed question answered from the keyword list.</figcaption></figure>
+<h2>The Complete Bot Code</h2>
+<p>Here is the whole bot in one file — the commands, buttons, keyword answers and conversation flow combined. Do not be put off by the length: it is only the pieces above put together, with the answers moved into one list at the top. Replace the sample answers, phone number and address in <code>ANSWERS</code> with your own details; that dictionary is the only part you have to personalise:</p>
+<pre><code class="language-python">import logging
+import os
+
+from dotenv import load_dotenv
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import (
+    Application,
+    CallbackQueryHandler,
+    CommandHandler,
+    ContextTypes,
+    ConversationHandler,
+    MessageHandler,
+    filters,
+)
+
+load_dotenv()
+
+logging.basicConfig(
+    format=&quot;%(asctime)s - %(name)s - %(levelname)s - %(message)s&quot;,
+    level=logging.INFO,
+)
+
+CHOOSING = 0
+
+ANSWERS = {
+    &quot;hours&quot;: &quot;We are open Monday to Saturday, 9 AM to 9 PM.&quot;,
+    &quot;location&quot;: &quot;You can find us on MG Road, Durgapur. Look us up on Google Maps for directions.&quot;,
+    &quot;services&quot;: &quot;We offer dine-in, takeaway and home delivery within the neighbourhood.&quot;,
+    &quot;contact&quot;: &quot;You can call us on 98765 43210 or email hello@example.com.&quot;,
+}
+
+KEYWORDS = {
+    &quot;hour&quot;: &quot;hours&quot;,
+    &quot;open&quot;: &quot;hours&quot;,
+    &quot;timing&quot;: &quot;hours&quot;,
+    &quot;where&quot;: &quot;location&quot;,
+    &quot;location&quot;: &quot;location&quot;,
+    &quot;address&quot;: &quot;location&quot;,
+    &quot;service&quot;: &quot;services&quot;,
+    &quot;deliver&quot;: &quot;services&quot;,
+    &quot;contact&quot;: &quot;contact&quot;,
+    &quot;phone&quot;: &quot;contact&quot;,
+    &quot;call&quot;: &quot;contact&quot;,
+}
+
+
+def topic_keyboard() -&gt; InlineKeyboardMarkup:
+    keyboard = [
+        [
+            InlineKeyboardButton(&quot;Opening hours&quot;, callback_data=&quot;hours&quot;),
+            InlineKeyboardButton(&quot;Location&quot;, callback_data=&quot;location&quot;),
+        ],
+        [
+            InlineKeyboardButton(&quot;Services&quot;, callback_data=&quot;services&quot;),
+            InlineKeyboardButton(&quot;Contact us&quot;, callback_data=&quot;contact&quot;),
+        ],
+    ]
+    return InlineKeyboardMarkup(keyboard)
+
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; int:
+    await update.message.reply_text(
+        &quot;Hi! I can answer a few common questions. &quot;
+        &quot;Pick a topic below, or just type your question.&quot;,
+        reply_markup=topic_keyboard(),
+    )
+    return CHOOSING
+
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    await update.message.reply_text(
+        &quot;/start - open the question menu\n&quot;
+        &quot;/help - show this message\n&quot;
+        &quot;/cancel - end the conversation&quot;
+    )
+
+
+async def button_tap(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; int:
+    query = update.callback_query
+    await query.answer()
+    answer = ANSWERS.get(query.data, &quot;Sorry, I do not have an answer for that yet.&quot;)
+    await query.edit_message_text(answer, reply_markup=topic_keyboard())
+    return CHOOSING
+
+
+async def text_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; int:
+    text = update.message.text.lower()
+    for word, topic in KEYWORDS.items():
+        if word in text:
+            await update.message.reply_text(
+                ANSWERS[topic], reply_markup=topic_keyboard()
+            )
+            return CHOOSING
+    await update.message.reply_text(
+        &quot;I am not sure about that one. Try one of these topics:&quot;,
+        reply_markup=topic_keyboard(),
+    )
+    return CHOOSING
+
+
+async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; int:
+    await update.message.reply_text(
+        &quot;No problem. Send /start whenever you want to chat again.&quot;
+    )
+    return ConversationHandler.END
+
+
+def main() -&gt; None:
+    token = os.environ.get(&quot;TELEGRAM_BOT_TOKEN&quot;)
+    if not token:
+        raise SystemExit(
+            &quot;TELEGRAM_BOT_TOKEN is not set. Put your BotFather token in the .env file first.&quot;
+        )
+    app = Application.builder().token(token).build()
+
+    conversation = ConversationHandler(
+        entry_points=[CommandHandler(&quot;start&quot;, start)],
+        states={
+            CHOOSING: [
+                CallbackQueryHandler(button_tap),
+                MessageHandler(filters.TEXT &amp; ~filters.COMMAND, text_message),
+            ]
+        },
+        fallbacks=[CommandHandler(&quot;cancel&quot;, cancel)],
+    )
+    app.add_handler(conversation)
+    app.add_handler(CommandHandler(&quot;help&quot;, help_command))
+
+    app.run_polling()
+
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+<p>Save it as <code>bot.py</code>, replacing the earlier version, make sure the <code>.env</code> file sits in the same folder, and run <code>python3 bot.py</code>. You now have a working chatbot: it greets people, answers from your list of questions by button or by keyword, and keeps the conversation going until the user cancels.</p>
+<h2>Step 6: Keep the Bot Running</h2>
+<p>While the script runs on your computer, the bot is online. Close the laptop and it stops. There are two ways Telegram can deliver messages to a bot, and it helps to know the difference before you pick a home for it. With <strong>polling</strong>, your program keeps asking Telegram for new messages — that is what you have been using so far. With a <strong>webhook</strong>, Telegram pushes each new message to your server's address the moment it arrives:</p>
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Polling</th>
+  <th>Webhook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>How it works</strong></td>
+  <td>Your script asks Telegram for new messages every few seconds</td>
+  <td>Telegram sends each new message to your server's URL</td>
+</tr>
+<tr>
+  <td><strong>Setup</strong></td>
+  <td>Nothing to configure; just run the script</td>
+  <td>Needs a public HTTPS address and a small web server</td>
+</tr>
+<tr>
+  <td><strong>Good for</strong></td>
+  <td>Learning, small bots, a home machine or a cheap VPS</td>
+  <td>Busy bots and production setups</td>
+</tr>
+<tr>
+  <td><strong>Watch out for</strong></td>
+  <td>The bot is offline whenever the script is stopped</td>
+  <td>More moving parts to secure and look after</td>
+</tr>
+</tbody>
+</table>
+<p>For a small bot, polling on a low-cost VPS is enough. On a Linux server, a systemd service keeps the bot running and restarts it if it crashes or the server reboots. This part is only for a Linux server — if your bot still runs on your own computer, skip it for now and come back when you move the bot. Save this as <code>/etc/systemd/system/faq-bot.service</code>:</p>
+<pre><code>[Unit]
+Description=Telegram FAQ bot
+After=network.target
+
+[Service]
+WorkingDirectory=/home/user/faq-bot
+Environment=TELEGRAM_BOT_TOKEN=your-token-here
+ExecStart=/home/user/faq-bot/.venv/bin/python /home/user/faq-bot/bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+<p>Then start it with <code>sudo systemctl enable --now faq-bot</code>. Whichever way you run it, run only one copy at a time: two scripts polling with the same token make Telegram reject the second one with a conflict error.</p>
+<h2>Stuck? Beginner Mistakes and Fixes</h2>
+<p>Almost every beginner hits one of these. Find the problem you are seeing — the fix is usually one line.</p>
+<ul>
+<li><strong>"Python is not recognized" (Windows).</strong> The terminal says <code>'python' is not recognized as an internal or external command</code>. This is the PATH checkbox from the install section: Windows was never told where Python lives. Fix it by running the Python installer again, choosing Modify, and ticking "Add python.exe to PATH" — or simply use <code>py</code> instead of <code>python</code> in every command, because the <code>py</code> launcher works either way.</li>
+<li><strong>ModuleNotFoundError: No module named 'telegram'.</strong> Python cannot find the library, which almost always means the virtual environment is off, or the library was installed while it was off. Fix: run the activate command for your system, check that your prompt starts with <code>(.venv)</code>, then run <code>pip install python-telegram-bot python-dotenv</code> again and start the bot again.</li>
+<li><strong>Invalid token, or an "Unauthorized" error.</strong> The token in your <code>.env</code> file does not match the one BotFather issued. Fix: open BotFather, copy the token again carefully — the whole string, no spaces at the start or end — and check that your <code>.env</code> line is exactly <code>TELEGRAM_BOT_TOKEN=</code> followed by the token, all on one line. If you ever revoked the token, the old one is dead; only the newest one works.</li>
+<li><strong>The bot runs but never replies.</strong> Work through this short list: is the script still running in the terminal (you should see it waiting, not a finished prompt)? Are you messaging the right bot — check the username against the one you chose in Step 1? Did you press <strong>Start</strong> in the chat? And does the token in <code>.env</code> belong to this bot, not another one?</li>
+<li><strong>"Conflict: terminated by other getUpdates request".</strong> Two copies of the bot are polling with the same token, and Telegram allows only one. Fix: close every terminal that is running <code>bot.py</code> (and stop the server service too, if you set one up), wait a few seconds, then start exactly one copy.</li>
+<li><strong>Pasting the token into the code.</strong> Sooner or later that file reaches GitHub, and bots with leaked tokens get taken over. Keep the token in the <code>.env</code> file, and revoke it in BotFather if it ever gets out.</li>
+<li><strong>Waiting for the bot to speak first.</strong> It cannot. A user always has to open the chat and press Start before the bot can send anything.</li>
+<li><strong>Worrying about "Message is not modified".</strong> If a user taps the same topic button twice, Telegram refuses to edit the message into identical text and logs this error. It is harmless.</li>
+<li><strong>Expecting keyword matching to be clever.</strong> The bot only finds the exact words in your list. Cover the common phrasings ("open", "timing", "hours") and give a helpful fallback answer for the rest.</li>
+</ul>
+<h2>Frequently Asked Questions</h2>
+<h3>Is it free to build a Telegram bot?</h3>
+<p>Yes. Creating a bot with BotFather and using the Telegram Bot API costs nothing. You only pay if you choose to rent a server to keep the bot online around the clock.</p>
+<h3>Do I need a server?</h3>
+<p>Not for learning or testing — polling works on your own computer for as long as the script runs. If the bot needs to answer at any hour, move it to a small VPS or any machine that stays on.</p>
+<h3>Should I use polling or a webhook?</h3>
+<p>Polling, while the bot is small or you are still learning. A webhook earns its extra setup when the bot gets busy, or when you already run a web server and want messages pushed to you instantly.</p>
+<h3>Can a Telegram bot message people first?</h3>
+<p>No. A user has to open the chat and press Start, or send the bot a message, before it can reply to them. Bots also cannot message people who have never interacted with them.</p>
+<h3>Is python-telegram-bot the only Python library for this?</h3>
+<p>No. aiogram is another popular choice, and you can also call the Telegram Bot API directly with plain HTTP requests. This guide uses python-telegram-bot because its handler model is easy to follow when you are starting out.</p>
+<h2>You Did It: What You Have Now</h2>
+<p>If you followed along, look at what is now sitting on your computer — not bad for a first day:</p>
+<ul>
+<li>✓ A Telegram bot of your own, created with BotFather, with a username anyone can find</li>
+<li>✓ Python installed properly, and a project folder with its own virtual environment</li>
+<li>✓ Your bot's token stored safely in a <code>.env</code> file, out of the code</li>
+<li>✓ A working <code>bot.py</code> that greets people with <code>/start</code>, helps with <code>/help</code> and ends politely with <code>/cancel</code></li>
+<li>✓ Tappable topic buttons, plus answers to typed questions, using your own words and answers</li>
+<li>✓ A bot that stays online while the script runs — and a clear next step (a small VPS with the service above) for when you want it on all day</li>
+</ul>
+<p>From here, every bigger bot is the same pattern repeated: a new question is a new answer in the list, and a new action is a new handler. That is genuinely how the Telegram News Bot mentioned at the start is put together.</p>
+<h2>Need a Telegram Bot Built for You?</h2>
+<p>If you want a Telegram bot built for you, I build bots like this one — FAQ and support chatbots, news and alert bots, and price-tracking bots — for small businesses and personal projects. A bot for your business can answer customer enquiries, take orders, handle routine support questions and send alerts when something needs a human. You can see my work on <a href="https://github.com/shubhranillayek">GitHub</a>, including the <a href="https://github.com/shubhranillayek/telegram-news-bot">Telegram News Bot</a> mentioned at the start, or reach me at <a href="mailto:subhralayek7@gmail.com">subhralayek7@gmail.com</a>.</p>
+<p>I'm Shubhranil Layek, a Python developer based in Durgapur, West Bengal, and I'm available for freelance projects. If you have a bot in mind, write to me with what it should do — I'll reply with how I would build it.</p>
+<p>For more guides and projects, visit <a href="https://shubhranillayek.github.io/">Shubhranil Layek's developer website</a> or browse the <a href="https://shubhranillayek.github.io/blog/">blog</a>.</p>
+
+</article></main>
+<footer><div class="wrap">Shubhranil Layek · Python developer · <a href="https://shubhranillayek.github.io/">Developer profile</a> · <a href="https://shubhranillayek.github.io/blog/">Blog</a> · <a href="https://github.com/shubhranillayek">GitHub and project source</a></div></footer>
+<script>
+(function(){
+  var btn=document.querySelector(".theme-switch");
+  if(!btn)return;
+  var root=document.documentElement;
+  function sync(){
+    var d=root.dataset.theme==="dark";
+    btn.setAttribute("aria-checked",d?"true":"false");
+    var m=document.querySelector('meta[name="theme-color"]');
+    if(m)m.setAttribute("content",d?"#1f1e1b":"#faf9f5");
+  }
+  sync();
+  btn.addEventListener("click",function(e){
+    var next=root.dataset.theme==="dark"?"light":"dark";
+    function apply(){
+      root.dataset.theme=next;
+      try{localStorage.setItem("theme",next);}catch(_){}
+      sync();
+    }
+    var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(document.startViewTransition&&!reduced){
+      var x=e.clientX||window.innerWidth-70;
+      var y=e.clientY||40;
+      var r=Math.hypot(Math.max(x,window.innerWidth-x),Math.max(y,window.innerHeight-y));
+      var vt=document.startViewTransition(apply);
+      vt.ready.then(function(){
+        root.animate(
+          {clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},
+          {duration:750,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
+        );
+      }).catch(function(){});
+    }else{
+      root.classList.add("theming");
+      apply();
+      setTimeout(function(){root.classList.remove("theming");},500);
+    }
+  });
+})();
+</script>
+</body>
+</html>
