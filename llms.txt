@@ -46,6 +46,7 @@
 - [Telegram Gemini Chatbot](https://github.com/shubhranillayek/telegram-gemini-chatbot): An n8n workflow (no code) that connects Telegram to Google Gemini (AI Studio): you message the bot, Gemini answers, and the reply comes back on Telegram. Import it into n8n, add a BotFather token and a free Gemini API key, and switch it on.
 - [WeatherNow](https://github.com/shubhranillayek/stunning-weather-app): JavaScript weather and air-quality dashboard using Open-Meteo, with hourly and 7-day forecasts, temperature charts and city comparisons. Live demo: https://shubhranillayek.github.io/stunning-weather-app/
 - [Tic-Tac-Toe](https://github.com/shubhranillayek/tic-tac-toe): Vanilla JavaScript Tic-Tac-Toe with minimax AI, three difficulty levels, local two-player mode, undo and Web Audio sound effects. Live demo: https://shubhranillayek.github.io/tic-tac-toe/
+- **Price Tracking Telegram Bot**: An earlier Python Telegram bot that tracked the price of products on Flipkart and Amazon, and sent an alert on Telegram whenever a price went up or down. (Private project — not open source, no public link.)
 
 ## Blog posts
 
