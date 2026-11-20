@@ -15,14 +15,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="light";}})();</script>
 <meta name="theme-color" content="#faf9f5">
-<title>How to Build a Telegram Chatbot with Google AI Studio (Gemini): Step-by-Step Guide</title>
-<meta name="description" content="Build a Telegram chatbot with Google AI Studio and Gemini, step by step for beginners: get a free Gemini API key, write the Python code with python-telegram-bot and google-genai, and run your own AI chatbot.">
+<title>How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide</title>
+<meta name="description" content="Build a Telegram chatbot with Google AI Studio and Gemini in n8n, step by step for beginners: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.">
 <meta name="author" content="Shubhranil Layek">
 <link rel="canonical" href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/">
 <link rel="stylesheet" href="https://shubhranillayek.github.io/blog/styles.css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Build a Telegram Chatbot with Google AI Studio (Gemini): Step-by-Step Guide">
-<meta property="og:description" content="Build a Telegram chatbot with Google AI Studio and Gemini, step by step for beginners: get a free Gemini API key, write the Python code with python-telegram-bot and google-genai, and run your own AI chatbot.">
+<meta property="og:title" content="How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide">
+<meta property="og:description" content="Build a Telegram chatbot with Google AI Studio and Gemini in n8n, step by step for beginners: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.">
 <meta property="og:url" content="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/">
 <meta property="og:site_name" content="Shubhranil Layek">
 <meta property="og:image" content="https://shubhranillayek.github.io/og-image.png">
@@ -32,12 +32,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://shubhranillayek.github.io/og-image.png">
 <meta name="twitter:image:alt" content="How to Build a Telegram Chatbot with Google AI Studio (Gemini) — Shubhranil Layek">
-<meta name="twitter:title" content="How to Build a Telegram Chatbot with Google AI Studio (Gemini): Step-by-Step Guide">
-<meta name="twitter:description" content="Build a Telegram chatbot with Google AI Studio and Gemini, step by step for beginners: get a free Gemini API key, write the Python code with python-telegram-bot and google-genai, and run your own AI chatbot.">
+<meta name="twitter:title" content="How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide">
+<meta name="twitter:description" content="Build a Telegram chatbot with Google AI Studio and Gemini in n8n, step by step for beginners: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.">
 <meta property="article:published_time" content="2026-11-20T03:42:00Z">
-<meta property="article:modified_time" content="2026-11-20T03:42:00Z">
+<meta property="article:modified_time" content="2026-11-20T03:52:45Z">
 <meta property="article:author" content="https://shubhranillayek.github.io/">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#webpage","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/","name":"How to Build a Telegram Chatbot with Google AI Studio (Gemini): Step-by-Step Guide","description":"Build a Telegram chatbot with Google AI Studio and Gemini, step by step for beginners: get a free Gemini API key, write the Python code with python-telegram-bot and google-genai, and run your own AI chatbot.","mainEntity":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#article"},"isPartOf":{"@id":"https://shubhranillayek.github.io/#website"},"breadcrumb":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#breadcrumbs"},"inLanguage":"en"},{"@type":"BlogPosting","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#article","headline":"How to Build a Telegram Chatbot with Google AI Studio (Gemini): A Step-by-Step Guide","description":"Build a Telegram chatbot with Google AI Studio and Gemini, step by step for beginners: get a free Gemini API key, write the Python code with python-telegram-bot and google-genai, and run your own AI chatbot.","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/","mainEntityOfPage":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#webpage"},"author":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"publisher":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"datePublished":"2026-11-20T03:42:00Z","dateModified":"2026-11-20T03:42:00Z","inLanguage":"en","articleSection":"Tutorials","about":{"@type":"SoftwareApplication","name":"Telegram Gemini Chatbot","url":"https://github.com/shubhranillayek/telegram-gemini-chatbot"},"citation":["https://github.com/shubhranillayek/telegram-gemini-chatbot","https://aistudio.google.com/","https://ai.google.dev/gemini-api/docs","https://core.telegram.org/bots"]},{"@type":"Person","@id":"https://shubhranillayek.github.io/#shubhranil-layek","name":"Shubhranil Layek","url":"https://shubhranillayek.github.io/","sameAs":["https://github.com/shubhranillayek"]},{"@type":"BreadcrumbList","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://shubhranillayek.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://shubhranillayek.github.io/blog/"},{"@type":"ListItem","position":3,"name":"How to Build a Telegram Chatbot with Google AI Studio (Gemini): Step-by-Step Guide","item":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#webpage","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/","name":"How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide","description":"Build a Telegram chatbot with Google AI Studio and Gemini in n8n, step by step for beginners: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.","mainEntity":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#article"},"isPartOf":{"@id":"https://shubhranillayek.github.io/#website"},"breadcrumb":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#breadcrumbs"},"inLanguage":"en"},{"@type":"BlogPosting","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#article","headline":"How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: A Step-by-Step Guide","description":"Build a Telegram chatbot with Google AI Studio and Gemini in n8n, step by step for beginners: create a bot with BotFather, get a free Gemini API key, import the ready-made workflow, add two credentials and switch it on. No coding needed.","url":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/","mainEntityOfPage":{"@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#webpage"},"author":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"publisher":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"datePublished":"2026-11-20T03:42:00Z","dateModified":"2026-11-20T03:52:45Z","inLanguage":"en","articleSection":"Tutorials","about":{"@type":"SoftwareApplication","name":"Telegram Gemini Chatbot","url":"https://github.com/shubhranillayek/telegram-gemini-chatbot"},"citation":["https://github.com/shubhranillayek/telegram-gemini-chatbot","https://aistudio.google.com/","https://ai.google.dev/gemini-api/docs","https://core.telegram.org/bots","https://n8n.io/","https://docs.n8n.io/"]},{"@type":"Person","@id":"https://shubhranillayek.github.io/#shubhranil-layek","name":"Shubhranil Layek","url":"https://shubhranillayek.github.io/","sameAs":["https://github.com/shubhranillayek"]},{"@type":"BreadcrumbList","@id":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://shubhranillayek.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://shubhranillayek.github.io/blog/"},{"@type":"ListItem","position":3,"name":"How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: Step-by-Step Guide","item":"https://shubhranillayek.github.io/blog/how-to-build-a-telegram-chatbot-with-google-ai-studio/"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -46,317 +46,137 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://shubhranillayek.github.io/">Home</a><span aria-hidden="true">/</span><a href="https://shubhranillayek.github.io/blog/">Blog</a><span aria-hidden="true">/</span><span>Telegram Chatbot with Gemini</span></nav>
 <p class="eyebrow">Tutorial</p>
 <p class="post-meta">Published <time datetime="2026-11-20T03:42:00Z">20 November 2026</time></p>
-<h1>How to Build a Telegram Chatbot with Google AI Studio (Gemini): A Step-by-Step Guide</h1>
+<h1>How to Build a Telegram Chatbot with Google AI Studio (Gemini) in n8n: A Step-by-Step Guide</h1>
 <p><strong>By <a href="https://shubhranillayek.github.io/">Shubhranil Layek</a></strong></p>
-<p>Most Telegram bots only answer what they were taught in advance — tap a button, get a fixed reply. An AI chatbot is different: it understands plain questions and writes its own answers. In this guide you will build one, from an empty folder, using Google's Gemini AI through a free Google AI Studio API key. The bot will hold a real conversation, remember what you just talked about, and answer follow-up questions. No coding experience is needed; every step is explained in simple words. If you'd rather not build it yourself, I can build the bot for you — for your business or a personal project — and there's a note about that at the end of this guide.</p>
-<p>The full code from this guide lives in one project, the <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">Telegram Gemini Chatbot on GitHub</a>, so you can download it and compare it with your own copy as you go. If you have never made a Telegram bot at all, my earlier guide, <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">How to Build a Telegram Bot with Python</a>, covers the absolute basics — installing Python, what a terminal is, how BotFather works — in more depth.</p>
-<figure style="margin:1.6rem 0"><img src="gemini-telegram-chatbot-header.png" alt="Guide header for How to Build a Telegram Chatbot with Google AI Studio and Gemini, showing a Python code snippet and a short sample chat with an AI bot" width="1200" height="630" style="max-width:100%;height:auto;border-radius:10px"></figure>
-<h2>Start Here: AI Chatbot Basics for Complete Beginners</h2>
-<p>If words like "API key" and "model" are new to you, read this part first. It takes three minutes, and everything after it will make sense.</p>
+<p>Most Telegram bots only answer what they were taught in advance — tap a button, get a fixed reply. An AI chatbot is different: it understands plain questions and writes its own answers. In this guide you will build one without writing any code, using <strong>n8n</strong> — a visual tool where you connect ready-made blocks instead of typing programs — together with Google's Gemini AI and a free Google AI Studio API key. You will import a ready workflow, add two keys, switch it on, and your bot will start answering real questions on Telegram. No coding experience is needed; every step is explained in simple words. If you'd rather not build it yourself, I can build the bot for you — for your business or a personal project — and there's a note about that at the end of this guide.</p>
+<p>The finished workflow from this guide lives in one project, the <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">Telegram Gemini Chatbot on GitHub</a>. You will download the workflow file from there in Step 4, so you can open the repo now and keep it beside you as you go.</p>
+<figure style="margin:1.6rem 0"><img src="gemini-telegram-chatbot-header.png" alt="Guide header for How to Build a Telegram Chatbot with Google AI Studio and Gemini in n8n, showing the workflow on the n8n canvas and a short sample chat with an AI bot" width="1200" height="630" style="max-width:100%;height:auto;border-radius:10px"></figure>
+<h2>Start Here: The Basics for Complete Beginners</h2>
+<p>If words like "API key", "model" and "workflow" are new to you, read this part first. It takes three minutes, and everything after it will make sense.</p>
 <h3>What is an AI chatbot?</h3>
-<p>A normal bot follows rules you wrote: if the user types "timings", reply with the opening hours. An AI chatbot sends the user's message to an AI model — a program trained on huge amounts of text that can understand questions and write answers — and replies with whatever the model writes back. You do not write the answers. You write the small program that carries messages between Telegram and the model. That carrier program is what this guide builds.</p>
+<p>A normal bot follows rules somebody set in advance: if the user types "timings", reply with the opening hours. An AI chatbot sends the user's message to an AI model — a program trained on huge amounts of text that can understand questions and write answers — and replies with whatever the model writes back. You do not write the answers. You only connect the pieces that carry messages between Telegram and the model. In this guide, n8n does that carrying for you.</p>
 <h3>What are Gemini and Google AI Studio?</h3>
-<p><strong>Gemini</strong> is Google's family of AI models — the same technology behind the Gemini app you may have chatted with. <strong>Google AI Studio</strong> is a free website from Google where developers get a key that lets their own programs talk to Gemini. That key is called an <strong>API key</strong>. An API is a fixed set of ways one program can ask another program for things, and the key is the password that proves the request comes from you. Your bot will use the key to ask Gemini, "here is what the user said — what should I reply?" and Gemini answers with text.</p>
-<p>Two things worth knowing before you start. First, the API key from AI Studio is free, with daily limits that are plenty for learning and personal use; you do not add a card. Second, the key is a password for your quota — anyone who has it can spend your limits — so it gets the same treatment as the bot token: it lives in a <code>.env</code> file on your computer, never in the code, never in a screenshot.</p>
+<p><strong>Gemini</strong> is Google's family of AI models — the same technology behind the Gemini app you may have chatted with. <strong>Google AI Studio</strong> is a free website from Google where developers get a key that lets their own tools talk to Gemini. That key is called an <strong>API key</strong>. An API is a fixed set of ways one program can ask another program for things, and the key is the password that proves the request comes from you. Your workflow will use the key to ask Gemini, "here is what the user said — what should I reply?", and Gemini answers with text.</p>
+<p>Two things worth knowing before you start. First, the API key from AI Studio is free, with daily limits that are plenty for learning and personal use; you do not add a card. Second, the key is a password for your quota — anyone who has it can spend your limits — so it gets the same treatment as the bot token: it lives inside n8n's credential store, never in a shared file, never in a screenshot.</p>
+<h3>What is n8n?</h3>
+<p><strong>n8n</strong> is a tool for connecting apps together visually. Instead of writing a program, you place blocks — called <strong>nodes</strong> — on a canvas and join them with lines. Each node does one small job: receive a Telegram message, call Gemini, send a reply. A set of connected nodes is a <strong>workflow</strong>, and once you switch a workflow on, n8n runs it for you, day and night, on its own. You can run n8n on your own computer or server (it is free and open source) or use n8n Cloud, where n8n hosts it for you. This guide works exactly the same either way.</p>
 <h3>The pieces, in one picture</h3>
-<p>A user types in Telegram. Telegram delivers the message to your Python program. Your program adds the recent conversation and sends everything to Gemini with your API key. Gemini writes a reply. Your program hands it back to Telegram, and the user sees it — usually within a couple of seconds. Your program is small; the two big systems do the heavy lifting.</p>
+<p>A user types in Telegram. Telegram wakes your workflow in n8n. The workflow sends the message to Gemini with your API key. Gemini writes a reply. The workflow hands it back to Telegram, and the user sees it — usually within a few seconds. Four nodes do the whole job, and Step 4 shows you each one.</p>
 <h2>What You Need</h2>
 <ul>
 <li>A Telegram account, to create the bot through BotFather</li>
 <li>A Google account, for the free AI Studio API key</li>
-<li>Python 3.10 or newer installed (the <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">first guide</a> shows the install, including the Windows PATH checkbox, step by step)</li>
-<li>A text editor — VS Code, Notepad or TextEdit</li>
-<li>About an hour of free time</li>
+<li>An n8n account or your own n8n installation — <a href="https://n8n.io/">n8n Cloud</a> is the easiest start, and <a href="https://docs.n8n.io/">the n8n documentation</a> covers running it yourself</li>
+<li>About 30 to 45 minutes of free time</li>
 </ul>
+<p>That is the whole list. No code editor, no installs of programming tools, nothing to buy.</p>
 <h2 id="step-1">Step 1: Create a Telegram Bot with BotFather</h2>
-<p>The Telegram side starts the same way as any bot. Open Telegram, search for <strong>BotFather</strong> — the real one has a blue verified tick and the username <a href="https://t.me/BotFather">@BotFather</a> — and send <code>/newbot</code>. BotFather asks two questions: a display name (anything friendly, changeable later) and a username (unique, letters/numbers/underscores only, must end in <code>bot</code>, never changeable). It then replies with your <strong>token</strong>, a long string that is the bot's password.</p>
-<p>The <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/#step-1">first guide's Step 1</a> walks through this click by click, including what to do if a token ever leaks (<code>/revoke</code> in BotFather). Keep the token aside for Step 3 — it goes into the <code>.env</code> file, never into code.</p>
+<p>Open Telegram, search for <strong>BotFather</strong> — the real one has a blue verified tick and the username <a href="https://t.me/BotFather">@BotFather</a> — and send <code>/newbot</code>. BotFather asks two questions: a display name (anything friendly, changeable later) and a username (unique, letters/numbers/underscores only, must end in <code>bot</code>, never changeable). It then replies with your <strong>token</strong>, a long string that is the bot's password.</p>
+<p>Keep the token aside for Step 5 — it goes into an n8n credential, never into the workflow file itself. One safety habit worth learning now: if a token ever leaks, send <code>/revoke</code> to BotFather and it will issue a fresh one.</p>
 <h2>Step 2: Get Your Free Gemini API Key from Google AI Studio</h2>
 <p>Now the AI side. This takes about two minutes:</p>
 <ol>
 <li>Go to <a href="https://aistudio.google.com/">aistudio.google.com</a> and sign in with your Google account. If it asks you to accept the terms of service, read and accept them.</li>
 <li>Open <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> directly, or click <strong>Get API key</strong> in the left-hand menu.</li>
 <li>Click <strong>Create API key</strong>. AI Studio may ask you to create a Google Cloud project or pick an existing one — the default suggestion is fine; it is just the folder the key belongs to.</li>
-<li>Your key appears, starting with <code>AIza</code>. Copy it somewhere safe for the next step. You can come back to this page any time to see, copy or delete keys.</li>
+<li>Your key appears, starting with <code>AIza</code>. Copy it somewhere safe for Step 6. You can come back to this page any time to see, copy or delete keys.</li>
 </ol>
-<p>That is the whole signup. The free tier renews daily and is generous enough to build and run a personal chatbot; if you ever hit the limit mid-testing, the bot will get an error (covered in the mistakes section) and the limit resets the next day.</p>
-<h2>Step 3: Set Up the Python Project</h2>
-<p>Open a terminal and create the project folder — <code>mkdir</code> makes a folder, <code>cd</code> moves you inside it:</p>
-<pre><code class="language-bash">mkdir gemini-chatbot
-cd gemini-chatbot</code></pre>
-<p>Give the project its own virtual environment — a private box for its Python packages — and switch it on:</p>
-<pre><code class="language-bash">python3 -m venv .venv
-source .venv/bin/activate</code></pre>
-<p>On Windows, create it with <code>py -m venv .venv</code> and activate with <code>.venv\Scripts\activate</code>. Your prompt should now start with <code>(.venv)</code>. Then install the three libraries with <code>pip</code>, Python's package installer — <a href="https://docs.python-telegram-bot.org/">python-telegram-bot</a> to talk to Telegram, <a href="https://github.com/googleapis/python-genai">google-genai</a> (Google's official SDK) to talk to Gemini, and python-dotenv to read the key file:</p>
-<pre><code class="language-bash">pip install python-telegram-bot google-genai python-dotenv</code></pre>
-<p>Now the keys. Create a file in this folder named exactly <code>.env</code> (starting with a dot — choose "All files" in the save window so it does not become <code>.env.txt</code>) and put these lines in it, with your real keys after the equals signs:</p>
-<pre><code>TELEGRAM_BOT_TOKEN=123456789:AAE...your-botfather-token...
-GEMINI_API_KEY=AIza...your-gemini-key...
-GEMINI_MODEL=gemini-2.5-flash</code></pre>
-<p>The third line is optional — it picks which Gemini model answers. The flash models are the fast ones, made for chat, and the default in the code is the same value. Two warnings that save real pain: do not swap the two keys (the Telegram token and the Gemini key look nothing alike, but pasting each into the wrong line is the single most common beginner error with this project), and never upload this file anywhere. Also create a <code>.gitignore</code> file containing one line, <code>.env</code>, so Git leaves the file out if you later put the project on GitHub. Finally, create two empty code files in the folder: <code>gemini_chat.py</code> and <code>bot.py</code>. The next two steps fill them.</p>
-<h2>Step 4: The Brain — gemini_chat.py</h2>
-<p>This file is the AI half of the project, and it knows nothing about Telegram. It does three jobs: it holds the Gemini client, it remembers the recent conversation, and it turns one user message into one reply. Keeping it in its own file means you can later reuse the same brain inside a website or a WhatsApp bot without touching the Telegram code. Put this into <code>gemini_chat.py</code>:</p>
-<pre><code class="language-python">import os
-
-from google import genai
-from google.genai import types
-
-# How the bot should behave. Edit this to give your own bot a personality,
-# a job, or rules ("answer like a patient maths tutor", "reply in Hindi",
-# "keep answers under 100 words", and so on).
-SYSTEM_PROMPT = (
-    "You are a friendly assistant chatting inside Telegram. "
-    "Answer clearly and helpfully, in plain language. "
-    "Keep answers reasonably short unless the user asks for detail. "
-    "Do not use markdown tables. Simple formatting is fine."
-)
-
-DEFAULT_MODEL = "gemini-2.5-flash"
-
-
-class GeminiChat:
-    """One user's conversation with Gemini, with a short memory."""
-
-    def __init__(self, api_key=None, model=None, max_turns=10):
-        self.client = genai.Client(api_key=api_key or os.environ["GEMINI_API_KEY"])
-        self.model = model or os.getenv("GEMINI_MODEL", DEFAULT_MODEL)
-        # max_turns counts user+bot exchanges. Older turns are dropped so
-        # the history (and the bill / quota use) stays small.
-        self.max_turns = max_turns
-        self.history = []
-
-    def reset(self):
-        """Forget the conversation so far (the /clear command)."""
-        self.history = []
-
-    async def reply(self, user_text):
-        """Send one message and return Gemini's reply as plain text."""
-        contents = self.history + [
-            types.Content(
-                role="user",
-                parts=[types.Part.from_text(text=user_text)],
-            )
-        ]
-        response = await self.client.aio.models.generate_content(
-            model=self.model,
-            contents=contents,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                temperature=0.7,
-            ),
-        )
-        text = (response.text or "").strip()
-        if not text:
-            raise RuntimeError("Gemini returned an empty reply.")
-
-        # Remember both sides of this exchange.
-        self.history.append(
-            types.Content(
-                role="user",
-                parts=[types.Part.from_text(text=user_text)],
-            )
-        )
-        self.history.append(
-            types.Content(
-                role="model",
-                parts=[types.Part.from_text(text=text)],
-            )
-        )
-        # Keep only the most recent turns.
-        self.history = self.history[-2 * self.max_turns:]
-        return text</code></pre>
-<p>What matters in there, in plain words. The <strong>system prompt</strong> at the top is a standing instruction Gemini reads before every answer — it is where the bot's personality and rules live, and changing that one block of text is how you turn this general chatbot into a tutor, a support assistant or anything else. The <strong>history</strong> list is the memory: every exchange adds the user's message and the model's reply, and the whole list is sent along with each new question, which is exactly why "and why does that happen?" works — Gemini can see what "that" refers to. Only the last 10 exchanges are kept, so the memory stays small and cheap. And <code>reply()</code> is the one door the rest of the program uses: message in, answer out.</p>
-<h2>Step 5: The Telegram Side — bot.py</h2>
-<p>This file knows nothing about AI. It greets people, watches for commands, shows the typing indicator, and passes everything else to the brain from Step 4. It goes into <code>bot.py</code> in three parts, one after another in the same file. First, the imports, the key loading and the fixed texts:</p>
-<pre><code class="language-python">import logging
-import os
-
-from dotenv import load_dotenv
-from telegram import Update
-from telegram.constants import ChatAction
-from telegram.ext import (
-    Application,
-    CommandHandler,
-    ContextTypes,
-    MessageHandler,
-    filters,
-)
-
-from gemini_chat import GeminiChat
-
-load_dotenv()
-
-logging.basicConfig(
-    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
-    level=logging.INFO,
-)
-logger = logging.getLogger(__name__)
-
-# Telegram messages can be at most 4096 characters. Long Gemini replies
-# are split into chunks a little under that.
-CHUNK_SIZE = 4000
-
-WELCOME_TEXT = (
-    "Hi! I'm a chatbot powered by Google Gemini.\n\n"
-    "Ask me anything — explain a topic, draft a message, brainstorm ideas, "
-    "practise English. I remember the last few messages of our chat, so "
-    "follow-up questions work too.\n\n"
-    "Type /help to see the commands, and /clear whenever you want a "
-    "fresh start."
-)
-
-HELP_TEXT = (
-    "Here's what I understand:\n\n"
-    "/start — say hello and see this intro\n"
-    "/help — this list\n"
-    "/clear — forget our conversation and start over\n\n"
-    "Everything else you type goes to Gemini and gets an answer. "
-    "Go ahead, ask something."
-)
-
-ERROR_TEXT = (
-    "Sorry, something went wrong while I was thinking. "
-    "Please try again in a moment."
-)</code></pre>
-<p><code>load_dotenv()</code> is the line that reads your <code>.env</code> file, so the keys are available through <code>os.getenv</code> without ever appearing in the code itself. Next, the helpers and the four handlers — a handler is a rule that says "when this kind of message arrives, run this function":</p>
-<pre><code class="language-python">def split_text(text, size=CHUNK_SIZE):
-    """Split a long reply into Telegram-sized chunks, breaking on
-    newlines or spaces where possible instead of mid-word."""
-    chunks = []
-    while len(text) &gt; size:
-        cut = text.rfind("\n", 0, size)
-        if cut &lt; size // 2:
-            cut = text.rfind(" ", 0, size)
-        if cut &lt; size // 2:
-            cut = size
-        chunks.append(text[:cut].rstrip())
-        text = text[cut:].lstrip()
-    if text:
-        chunks.append(text)
-    return chunks
-
-
-def get_chat(context):
-    """Return this user's GeminiChat, creating it on first use. Each user
-    gets their own, so conversations never mix between people."""
-    chat = context.user_data.get("gemini_chat")
-    if chat is None:
-        chat = GeminiChat()
-        context.user_data["gemini_chat"] = chat
-    return chat
-
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(WELCOME_TEXT)
-
-
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(HELP_TEXT)
-
-
-async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    get_chat(context).reset()
-    await update.message.reply_text(
-        "Done — I've forgotten our conversation. Fresh start. What's next?"
-    )
-
-
-async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_text = (update.message.text or "").strip()
-    if not user_text:
-        return
-    # Show "typing…" while Gemini thinks. It disappears on its own after
-    # a few seconds or when the reply arrives.
-    await context.bot.send_chat_action(
-        chat_id=update.effective_chat.id, action=ChatAction.TYPING
-    )
-    try:
-        reply = await get_chat(context).reply(user_text)
-    except Exception:
-        logger.exception("Gemini request failed")
-        await update.message.reply_text(ERROR_TEXT)
-        return
-    for chunk in split_text(reply):
-        await update.message.reply_text(chunk)</code></pre>
-<p>Three details do the quiet work. <code>get_chat()</code> stores one <code>GeminiChat</code> per user inside <code>context.user_data</code>, which python-telegram-bot keeps separate for every person — that is why two people can chat at once without their memories mixing. The <code>chat()</code> handler sends the <strong>typing indicator</strong> before asking Gemini, because a "typing…" bubble tells the user an answer is coming during the second or two the model needs. And the <code>try/except</code> around the Gemini call means an API problem becomes one polite message to the user, not a dead bot. Last part — building the application and starting it:</p>
-<pre><code class="language-python">def build_application():
-    """Build the Telegram application. Kept separate from main() so the
-    wiring can be checked without starting the bot."""
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
-    if not token:
-        raise SystemExit(
-            "TELEGRAM_BOT_TOKEN is not set. Copy .env.example to .env and "
-            "paste the token BotFather gave you."
-        )
-    if not os.getenv("GEMINI_API_KEY"):
-        raise SystemExit(
-            "GEMINI_API_KEY is not set. Copy .env.example to .env and "
-            "paste your free key from Google AI Studio."
-        )
-    app = Application.builder().token(token).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("help", help_command))
-    app.add_handler(CommandHandler("clear", clear))
-    app.add_handler(
-        MessageHandler(filters.TEXT &amp; ~filters.COMMAND, chat)
-    )
-    return app
-
-
-def main():
-    app = build_application()
-    logger.info("Bot is running. Press Ctrl+C to stop.")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
-
-
-if __name__ == "__main__":
-    main()</code></pre>
-<p>The checks at the top of <code>build_application()</code> stop the bot with a clear sentence if a key is missing, instead of a confusing error later. The message handler's filter — text messages that are not commands — is what sends ordinary chat to Gemini while <code>/start</code>, <code>/help</code> and <code>/clear</code> go to their own handlers. And <code>run_polling()</code> is the loop that keeps asking Telegram "anything new?" and dispatching what arrives.</p>
-<h2>Step 6: Run It and Have Your First Conversation</h2>
-<p>Back in the terminal, with the virtual environment on, start the bot:</p>
-<pre><code class="language-bash">python bot.py</code></pre>
-<p>Open your bot in Telegram, press <strong>Start</strong>, and type a real question — then a follow-up that only makes sense with memory, like the conversation in this picture:</p>
-<figure style="margin:1.6rem 0"><img src="gemini-chatbot-chat.png" alt="A Telegram chat with the Gemini chatbot: the user asks it to explain photosynthesis simply, then asks a follow-up question that the bot answers using the conversation memory" width="820" height="1090" style="max-width:100%;height:auto;border-radius:10px"></figure>
-<p>Try <code>/clear</code> and then ask the same follow-up again — this time the bot will ask what you mean, because you wiped its memory. That one experiment teaches you more about how this bot works than any diagram. Stop the bot with <code>Ctrl+C</code> when you are done.</p>
-<h2>Step 7: Keep the Bot Running</h2>
-<p>The bot answers while <code>python bot.py</code> runs on your computer, and sleeps when it stops — fine for learning and for a personal bot you switch on when needed. For a bot that answers at any hour, move the folder to a small VPS or any always-on machine, repeat the setup there, and run it under a service manager so it restarts itself; the <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">first guide's final step</a> covers polling vs webhooks and a ready systemd setup in detail, and all of it applies to this bot unchanged.</p>
+<p>That is the whole signup. The free tier renews daily and is generous enough to build and run a personal chatbot; if you ever hit the limit mid-testing, the workflow will show an error (covered in the mistakes section) and the limit resets the next day.</p>
+<h2>Step 3: Get n8n Ready</h2>
+<p>You need n8n open in your browser before the next step. Two ways to get there:</p>
+<ul>
+<li><strong>n8n Cloud (easiest):</strong> sign up at <a href="https://n8n.io/">n8n.io</a> and your own n8n opens in the browser, already running. Nothing to install, and it stays online when your computer is off — which a chatbot needs.</li>
+<li><strong>Your own n8n:</strong> n8n is free to run yourself on your computer or a small server; the <a href="https://docs.n8n.io/hosting/">hosting section of the n8n docs</a> walks through the options. Pick this if you enjoy running your own tools.</li>
+</ul>
+<p>Either way, end this step with n8n open on your screen and an empty canvas or the workflows list in front of you.</p>
+<h2>Step 4: Download the Workflow and Import It</h2>
+<p>The workflow is already built for you — this step just brings it into your n8n.</p>
+<ol>
+<li>Open the <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">Telegram Gemini Chatbot repo on GitHub</a> and download the file <code>telegram-gemini-chatbot.workflow.json</code> (click the file name, then the download button at the top right of the file view).</li>
+<li>In n8n, click the <strong>…</strong> menu at the top right and choose <strong>Import from File</strong> — in some versions it sits under <strong>Workflows → Import from File</strong>.</li>
+<li>Pick the JSON file you just downloaded. The workflow opens on the canvas.</li>
+</ol>
+<p>You should see four nodes connected in a line. Here is what each one does:</p>
+<ul>
+<li><strong>Telegram Trigger</strong> — wakes the workflow whenever someone sends your bot a message.</li>
+<li><strong>Google Gemini (AI Studio)</strong> — sends the message text to the Gemini API (<code>gemini-2.5-flash</code>) and gets the reply.</li>
+<li><strong>Extract Gemini Reply</strong> — pulls the reply text and the chat ID out of Gemini's answer, so the reply goes back to the right chat.</li>
+<li><strong>Telegram Send Message</strong> — sends the reply to the user in the same chat.</li>
+</ul>
+<p>The workflow imports <strong>inactive</strong> — nothing runs yet. The file also contains placeholders instead of real credentials, on purpose: keys should never travel inside a shared file. The next two steps attach your own keys.</p>
+<h2>Step 5: Add the Telegram Credential</h2>
+<ol>
+<li>In n8n, open <strong>Credentials → New</strong> and search for <strong>Telegram API</strong>.</li>
+<li>Paste the BotFather token from Step 1 into the <strong>Access Token</strong> field.</li>
+<li>Save it, with a name like <code>Telegram account</code>.</li>
+<li>Back in the workflow, click the <strong>Telegram Trigger</strong> node and select this credential. Then click the <strong>Telegram Send Message</strong> node and select the same credential there too.</li>
+</ol>
+<p>Both Telegram nodes must use the same credential — this is the step people most often half-finish, and the mistakes section below starts with it for a reason.</p>
+<h2>Step 6: Add the Gemini Credential</h2>
+<p>The Gemini node talks to the API directly, so its key is stored as a header credential:</p>
+<ol>
+<li>In n8n, open <strong>Credentials → New</strong> and search for <strong>Header Auth</strong>.</li>
+<li>Set <strong>Name</strong> to exactly <code>X-goog-api-key</code> — letter for letter, including the dashes.</li>
+<li>Set <strong>Value</strong> to the Gemini API key from Step 2.</li>
+<li>Save it, with a name like <code>Google Gemini API Key</code>.</li>
+<li>Back in the workflow, click the <strong>Google Gemini (AI Studio)</strong> node and, under <strong>Credential for Header Auth</strong>, select this credential.</li>
+</ol>
+<h2>Step 7: Activate the Workflow and Test Your Bot</h2>
+<ol>
+<li>Click the <strong>Active</strong> toggle at the top right of the workflow so it turns on. n8n now registers your bot with Telegram and starts listening.</li>
+<li>Open Telegram, find your bot, press <strong>Start</strong>, and send it any message — a question, "explain photosynthesis like I'm 12", anything.</li>
+<li>The bot should reply with Gemini's answer within a few seconds.</li>
+<li>To see what happened under the hood, open the workflow's <strong>Executions</strong> tab in n8n. Every message shows up there, node by node, so you can see exactly what Gemini returned.</li>
+</ol>
+<figure style="margin:1.6rem 0"><img src="gemini-chatbot-chat.png" alt="A Telegram chat with the Gemini chatbot built in n8n: the user asks it to explain photosynthesis simply and the bot answers in plain words" width="820" height="1090" style="max-width:100%;height:auto;border-radius:10px"></figure>
+<p>To stop the bot later, switch <strong>Active</strong> off again. Telegram keeps the messages; the bot just stops answering them.</p>
+<h2>Step 8: Make It Yours</h2>
+<p>Three small changes cover most of what people want next, and all three live inside the <strong>Google Gemini (AI Studio)</strong> node:</p>
+<ul>
+<li><strong>A different model:</strong> the model name sits in the middle of the node's URL — <code>gemini-2.5-flash</code>. Swap it for any current Gemini model name and the workflow uses that instead.</li>
+<li><strong>A job or a tone:</strong> the node builds the request it sends. Put an instruction in front of the user's message — "Answer like a patient maths tutor:" or "You are the support assistant for my bakery; answer briefly and politely:" — and every reply follows it.</li>
+<li><strong>More or less creativity:</strong> the <code>temperature</code> value in the same request. Lower is more factual, higher is more playful.</li>
+</ul>
+<h2>One Honest Limit: This Bot Has No Memory (Yet)</h2>
+<p>This version of the workflow is <strong>stateless</strong> — each message is answered on its own. Ask a question, get a good answer, then ask "and why does that happen?" and the bot will not know what "that" was, because nothing about the earlier messages is sent along. For one-shot questions, explanations, drafts and practice conversations it works well. Remembering the last few messages per chat — for example by saving them in an n8n Data Table and sending them with each request — is the natural next upgrade, and the workflow is a good base for it.</p>
+<p>Two smaller limits in this version: it reads text messages only (photos, voice notes and stickers are ignored), and a very long Gemini answer can run into Telegram's 4096-character limit for a single message.</p>
 <h2>Stuck? Beginner Mistakes and Fixes</h2>
 <ul>
-<li><strong>"GEMINI_API_KEY is not set" (or the Telegram one).</strong> The <code>.env</code> file is missing, misnamed (<code>.env.txt</code> does not count), or the line is empty. Fix: check the file sits in the same folder as <code>bot.py</code>, is named exactly <code>.env</code>, and has no spaces around the equals sign.</li>
-<li><strong>Gemini replies with an API key error (400 / API_KEY_INVALID).</strong> The key in <code>.env</code> is wrong or incomplete. Fix: go back to <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>, copy the key again in full, and check it sits on the <code>GEMINI_API_KEY=</code> line — and that the BotFather token is on its own line, not this one. Swapping the two keys is the classic mistake here.</li>
-<li><strong>Quota or rate-limit errors (429).</strong> You have used up the free tier for now — heavy testing in a short burst does it. Fix: wait a bit, or until the daily reset, and consider a lighter flash model in the <code>GEMINI_MODEL</code> line.</li>
-<li><strong>ModuleNotFoundError: No module named 'google' (or 'telegram').</strong> A library is missing, almost always because the virtual environment was off during install. Fix: activate the environment (prompt starts with <code>(.venv)</code>), run <code>pip install python-telegram-bot google-genai python-dotenv</code> again, and restart the bot.</li>
-<li><strong>The bot answers, but forgets everything between messages.</strong> Something is recreating the chat object — usually an edited <code>get_chat()</code> or a bot restart between messages (restarting wipes memory; it lives in RAM, not on disk). In the code as written, memory lasts until <code>/clear</code> or a restart, and that is by design for a first version.</li>
-<li><strong>The user gets "Sorry, something went wrong…" every time.</strong> That friendly message hides the real error on purpose. Fix: read the terminal — the bot logs the actual exception right there, and it is almost always one of the key or quota problems above.</li>
-<li><strong>Pasting keys into the code "just for now".</strong> That file eventually reaches GitHub or a screenshot, and a leaked Gemini key spends your quota while a leaked bot token hands over your bot. Keys stay in <code>.env</code>. If one leaks: delete the key in AI Studio and create a new one; revoke the token in BotFather with <code>/revoke</code>.</li>
+<li><strong>The workflow is on but the bot never replies.</strong> Check the Telegram credential is selected on <em>both</em> Telegram nodes (Step 5), and that you pressed <strong>Start</strong> in the chat with the bot the token belongs to.</li>
+<li><strong>401 or API key error on the Gemini node.</strong> The Header Auth credential name must be exactly <code>X-goog-api-key</code>, and its value must be the AI Studio key — not the BotFather token. Swapping the two keys is the most common beginner error with this project; they look nothing alike, but they get pasted into the wrong boxes all the time.</li>
+<li><strong>429 or quota error.</strong> The Gemini free tier's daily limit is reached. It resets the next day; heavy testing days are the usual cause.</li>
+<li><strong>Nothing appears in Executions.</strong> The workflow is not Active, or the trigger did not register with Telegram. Switch Active off and on once — n8n re-registers the bot's webhook every time the workflow activates.</li>
+<li><strong>A key leaked in a screenshot or a shared file.</strong> Delete the key in AI Studio and create a new one, then update the n8n credential. For the bot token, send <code>/revoke</code> to BotFather and put the fresh token into the Telegram credential. Keys belong in n8n's credential store — never inside the workflow file you share.</li>
 </ul>
 <h2>Frequently Asked Questions</h2>
 <h3>Is the Gemini API really free?</h3>
 <p>Yes — the AI Studio free tier gives you a key with daily limits and needs no card. It is meant for building and testing, and it comfortably covers a personal chatbot. Paid tiers exist if a bot ever outgrows it, but nothing in this guide needs one.</p>
+<h3>Is n8n free?</h3>
+<p>Running n8n yourself is free — it is open source. n8n Cloud, where n8n hosts it for you, is a paid service with a trial. For a first chatbot, either works; Cloud is simply less setup, and it keeps the bot online when your own computer is off.</p>
 <h3>Which Gemini model should I use?</h3>
-<p>The flash models. They are the fast, chat-shaped ones, and <code>gemini-2.5-flash</code> is a good default. The model is one line in <code>.env</code>, so trying another is a ten-second experiment, not a code change.</p>
-<h3>Does the bot remember our whole conversation forever?</h3>
-<p>No, and that is deliberate. It keeps the last 10 exchanges, in memory only — a restart or a <code>/clear</code> wipes it. Long memory is possible (save the history to a database), but short memory is faster, cheaper on quota, and honestly enough for most chats.</p>
+<p>The flash models. They are the fast, chat-shaped ones, and <code>gemini-2.5-flash</code> — the one in the workflow — is a good default. Changing it is a ten-second edit in the Gemini node, as Step 8 shows.</p>
+<h3>Does the bot remember our conversation?</h3>
+<p>No — this version answers each message on its own, as explained in the limits section above. That keeps the workflow small and easy to understand. Memory is a well-trodden upgrade (store recent messages per chat, send them along with each request) once the basic bot is running.</p>
 <h3>Can it reply in Hindi or other languages?</h3>
-<p>Yes. Gemini answers in the language it is spoken to, and you can also put "reply in Hindi" (or any language) into the system prompt in <code>gemini_chat.py</code> to make it the bot's default.</p>
+<p>Yes. Gemini answers in the language it is spoken to, and you can also add "reply in Hindi" (or any language) to the instruction in the Gemini node, as Step 8 shows, to make it the bot's default.</p>
 <h3>Can I give the bot a specific job?</h3>
-<p>That is what the system prompt is for. Describe the job there — "you are the support assistant for my bakery; answer from this price list; be brief and polite" — and the same code becomes that bot. Teaching it your own documents is a bigger step (that is called grounding or RAG), but the personality-and-rules version above covers a lot of real uses.</p>
-<h3>Is this the same as the Telegram bots with buttons?</h3>
-<p>Same Telegram side, different brain. Buttons and fixed answers (the <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">first guide</a>) suit menus and FAQs with known answers. An AI chatbot suits open questions. Real business bots often mix both — buttons for the common paths, AI for everything else.</p>
+<p>That is what the instruction in the Gemini node is for. Describe the job there — "you are the support assistant for my bakery; answer from this price list; be brief and polite" — and the same workflow becomes that bot. Teaching it your own documents is a bigger step (that is called grounding or RAG), but the personality-and-rules version above covers a lot of real uses.</p>
+<h3>Do I need my computer on for the bot to work?</h3>
+<p>n8n needs to be running, wherever it lives. On n8n Cloud, that is handled for you. If you run n8n on your own computer, the bot answers only while that computer — and n8n on it — is on; a small always-on server is the usual step up.</p>
 <h2>You Did It: What You Have Now</h2>
-<p>If you followed along, here is what is sitting on your computer:</p>
+<p>If you followed along, here is what you now have:</p>
 <ul>
 <li>✓ A Telegram bot of your own, created with BotFather</li>
-<li>✓ A free Gemini API key from Google AI Studio, stored safely in a <code>.env</code> file next to the bot token</li>
-<li>✓ A working AI brain (<code>gemini_chat.py</code>) with a system prompt you control and a short per-user memory</li>
-<li>✓ A Telegram side (<code>bot.py</code>) with <code>/start</code>, <code>/help</code>, <code>/clear</code>, a typing indicator and polite error handling</li>
-<li>✓ A bot that holds a real conversation — follow-up questions included — while the script runs</li>
-<li>✓ The full project on <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">GitHub</a> to compare against, reuse and extend</li>
+<li>✓ A free Gemini API key from Google AI Studio</li>
+<li>✓ An n8n workflow of four nodes that carries messages between Telegram and Gemini</li>
+<li>✓ Both keys stored safely as n8n credentials — not in any shared file</li>
+<li>✓ A live AI chatbot on Telegram that answers real questions, while n8n is running</li>
+<li>✓ The full project on <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">GitHub</a> to download again, share and extend</li>
 </ul>
-<p>From here the pattern is yours to bend: change the system prompt and it is a different bot; swap the memory for a database and it remembers for good; add buttons from the first guide and it does both jobs at once.</p>
+<p>From here the pattern is yours to bend: change the instruction and it is a different bot; add a node and it can look things up, save notes or send alerts; add memory and it holds a real conversation.</p>
 <h2>Need a Telegram Bot Built for You?</h2>
 <p>If you want a Telegram bot built for you, I build bots like this one — AI chatbots powered by Gemini, FAQ and support bots, news and alert bots, and price-tracking bots — for small businesses and personal projects. A bot for your business can answer customer enquiries in plain language, handle routine support questions around the clock and pass the tricky ones to you. You can see my work on <a href="https://github.com/shubhranillayek">GitHub</a>, including the <a href="https://github.com/shubhranillayek/telegram-gemini-chatbot">Telegram Gemini Chatbot</a> built in this guide, or reach me at <a href="mailto:subhralayek7@gmail.com">subhralayek7@gmail.com</a>.</p>
-<p>I'm Shubhranil Layek, a Python developer based in Durgapur, West Bengal, and I'm available for freelance projects. If you have a bot in mind, write to me with what it should do — I'll reply with how I would build it.</p>
+<p>I'm Shubhranil Layek, a developer based in Durgapur, West Bengal, and I'm available for freelance projects. If you have a bot in mind, write to me with what it should do — I'll reply with how I would build it.</p>
 <p>For more guides and projects, visit <a href="https://shubhranillayek.github.io/">Shubhranil Layek's developer website</a> or browse the <a href="https://shubhranillayek.github.io/blog/">blog</a>.</p>
 
 </article></main>
