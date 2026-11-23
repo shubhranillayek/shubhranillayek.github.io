@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCCZHYBK0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BCCZHYBK0B');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="light";}})();</script>
+<meta name="theme-color" content="#faf9f5">
+<title>Amazon &amp; Flipkart Price Tracker: The Telegram Bot I Built to Catch Price Drops</title>
+<meta name="description" content="An Amazon price tracker and Flipkart price tracker in one Telegram bot, built in Python: how it stores price history, exposes fake sale discounts and sends a price drop alert the moment a price falls.">
+<meta name="author" content="Shubhranil Layek">
+<link rel="canonical" href="https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/">
+<link rel="stylesheet" href="https://shubhranillayek.github.io/blog/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Amazon &amp; Flipkart Price Tracker: The Telegram Bot I Built to Catch Price Drops">
+<meta property="og:description" content="An Amazon price tracker and Flipkart price tracker in one Telegram bot, built in Python: how it stores price history, exposes fake sale discounts and sends a price drop alert the moment a price falls.">
+<meta property="og:url" content="https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/">
+<meta property="og:site_name" content="Shubhranil Layek">
+<meta property="og:image" content="https://shubhranillayek.github.io/assets/img/blog-price-tracker.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Amazon and Flipkart Price Tracker Bot — Shubhranil Layek">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://shubhranillayek.github.io/assets/img/blog-price-tracker.webp">
+<meta name="twitter:image:alt" content="Amazon and Flipkart Price Tracker Bot — Shubhranil Layek">
+<meta name="twitter:title" content="Amazon &amp; Flipkart Price Tracker: The Telegram Bot I Built to Catch Price Drops">
+<meta name="twitter:description" content="An Amazon price tracker and Flipkart price tracker in one Telegram bot, built in Python: how it stores price history, exposes fake sale discounts and sends a price drop alert the moment a price falls.">
+<meta property="article:published_time" content="2026-11-23T03:55:00Z">
+<meta property="article:modified_time" content="2026-11-23T03:57:00Z">
+<meta property="article:author" content="https://shubhranillayek.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#webpage","url":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/","name":"Amazon & Flipkart Price Tracker: The Telegram Bot I Built to Catch Price Drops","description":"An Amazon price tracker and Flipkart price tracker in one Telegram bot, built in Python: how it stores price history, exposes fake sale discounts and sends a price drop alert the moment a price falls.","mainEntity":{"@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#article"},"isPartOf":{"@id":"https://shubhranillayek.github.io/#website"},"breadcrumb":{"@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#breadcrumbs"},"inLanguage":"en"},{"@type":"BlogPosting","@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#article","headline":"Amazon & Flipkart Price Tracker: How My Telegram Bot Catches a Price Drop","description":"An Amazon price tracker and Flipkart price tracker in one Telegram bot, built in Python: how it stores price history, exposes fake sale discounts and sends a price drop alert the moment a price falls.","url":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/","mainEntityOfPage":{"@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#webpage"},"author":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"publisher":{"@id":"https://shubhranillayek.github.io/#shubhranil-layek"},"datePublished":"2026-11-23T03:55:00Z","dateModified":"2026-11-23T03:57:00Z","inLanguage":"en","articleSection":"Projects","about":{"@type":"SoftwareApplication","name":"Price Tracking Telegram Bot"},"image":"https://shubhranillayek.github.io/assets/img/blog-price-tracker.webp"},{"@type":"Person","@id":"https://shubhranillayek.github.io/#shubhranil-layek","name":"Shubhranil Layek","url":"https://shubhranillayek.github.io/","sameAs":["https://github.com/shubhranillayek"]},{"@type":"BreadcrumbList","@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://shubhranillayek.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://shubhranillayek.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Amazon & Flipkart Price Tracker: The Telegram Bot I Built to Catch Price Drops","item":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/"}]},{"@type":"FAQPage","@id":"https://shubhranillayek.github.io/blog/price-tracker-bot-amazon-flipkart-telegram/#faq","mainEntity":[{"@type":"Question","name":"Does one price tracker work for both Amazon and Flipkart?","acceptedAnswer":{"@type":"Answer","text":"Yes. The store is just a label on the record. Underneath, both sites reduce to the same job: take a product link, pull out a stable product ID, fetch the current price on a schedule, store it, and compare it with the last one. The fetching code differs per store, because the pages are built differently and Flipkart prices can change with the delivery pincode. The tracking, history and alerting code is shared."}},{"@type":"Question","name":"How do I check the price history of a product on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Open the product in the Amazon app and look for the price history graph on the listing, which shows recent lows and highs. If your listing does not show it, a tracker that has been recording the price for a few weeks gives you the same answer: compare today's price with the lowest price of the last 60 to 90 days, not with the struck-through MRP."}},{"@type":"Question","name":"Are sale prices on Amazon and Flipkart real discounts?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, and price history is how you tell. A common pattern is for the price to rise one or two weeks before a big sale, so the sale-day cut looks larger than it is. If the sale price is close to what the product sold for a month earlier, it is the normal price wearing a banner. A genuine deal sits clearly below the recent range."}},{"@type":"Question","name":"How fast is a Telegram price drop alert?","acceptedAnswer":{"@type":"Answer","text":"As fast as the checking interval. My bot checked every few hours, so an alert could arrive up to one interval after the price changed. Checking every few minutes sounds better, but it multiplies the cost of fetching prices and annoys the stores' defences. For phones, appliances and most electronics, a few hours is fast enough, because real price drops usually stay live for at least a day."}},{"@type":"Question","name":"Can I use this price tracker bot myself?","acceptedAnswer":{"@type":"Answer","text":"Not directly. I built it as a private project for my own use, so there is no public bot to join and no code repository for it. This post explains how it works in enough detail to build your own, and if you would rather have one built for your shop, channel or community, that is work I take on: my contact details are at the end of the post."}}]}]}</script>
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="wrap" aria-label="Main navigation"><a href="https://shubhranillayek.github.io/">Shubhranil Layek</a><div class="navlinks"><a href="https://shubhranillayek.github.io/">Home</a><a href="https://shubhranillayek.github.io/blog/" aria-current="true">Blog</a><a href="https://shubhranillayek.github.io/#projects">Projects</a><a href="https://shubhranillayek.github.io/#contact">Contact</a><button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Toggle dark mode"><span class="ts-knob"><svg class="ts-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ts-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></button></div></nav></header>
+<main id="main" class="wrap blog-main"><article class="post">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://shubhranillayek.github.io/">Home</a><span aria-hidden="true">/</span><a href="https://shubhranillayek.github.io/blog/">Blog</a><span aria-hidden="true">/</span><span>Amazon &amp; Flipkart Price Tracker Bot</span></nav>
+<p class="eyebrow">Project walkthrough</p>
+<p class="post-meta">Published <time datetime="2026-11-23T03:55:00Z">23 November 2026</time> &middot; 14 min read</p>
+<h1>Amazon &amp; Flipkart Price Tracker: How My Telegram Bot Catches a Price Drop</h1>
+<p><strong>By <a href="https://shubhranillayek.github.io/">Shubhranil Layek</a></strong></p>
+<p>Two weeks before the Big Billion Days sale, a phone I had been watching on Flipkart quietly went up by ₹1,500. Nobody announced it. The listing just cost more one morning than it had the week before. Then the sale started, the price came back down with a big green discount banner on it, and the "deal" price was almost exactly what the phone had cost in the first place. Amazon's Great Indian Festival plays the same game with different colours.</p>
+<p>That little trick is why I built this project. I wanted one tool that works as both an Amazon price tracker and a Flipkart price tracker, remembers what things actually cost, and taps me on the shoulder when a price genuinely falls. What I ended up with is a small Python bot that lives in Telegram. I send it a product link, it watches the price for me, and it sends a price drop alert when the number moves. This post is the full story: what it does, how the code is put together, how to check price history yourself without any bot at all, and the parts of this project that were much harder than the bot itself.</p>
+<figure style="margin:1.6rem 0"><img src="https://shubhranillayek.github.io/assets/img/blog-price-tracker.webp" alt="Designed header graphic for the Amazon and Flipkart price tracker bot: send a product link, the bot checks the price, and a price drop alert lands on Telegram" width="1200" height="630" style="max-width:100%;height:auto;border-radius:10px"></figure>
+<h2>The Discount Was Invented Before the Sale Started</h2>
+<p>Online prices are not fixed prices that occasionally change. They move constantly: up on payday weekends, down when a competing listing undercuts them, up again when stock runs low. Most shoppers only ever see two numbers, today's price and a struck-through MRP that may never have been charged by anyone. A discount percentage calculated from a fantasy MRP tells you nothing.</p>
+<p>Price history tells you plenty. Once you record a product's price every day for a month, patterns jump out:</p>
+<ul>
+<li><strong>The pre-sale lift.</strong> The price climbs a week or two before a big sale event, so the sale cut looks dramatic. The sale price often lands where the price sat quietly a month earlier.</li>
+<li><strong>The weekday rhythm.</strong> Some products dip mid-week and recover by Friday evening, when more people shop.</li>
+<li><strong>The real floor.</strong> Every product has a price it returns to again and again. That floor, not the MRP, is the number a good deal has to beat.</li>
+</ul>
+<p>A tracker turns shopping from a guessing game into a waiting game. You pick the price you are willing to pay, and let the record tell you when the store reaches it. That record is the whole point of the bot, and it is also something you can check by hand, which I will get to after the bot itself.</p>
+<h2>What the Bot Does, From the User's Side</h2>
+<p>Using it takes about ten seconds. I open the bot in Telegram and send <code>/track</code> followed by a product link, copied from the Amazon or Flipkart app:</p>
+<pre><code>/track https://www.amazon.in/dp/B0CXYZ1234
+/track https://www.flipkart.com/product-name/p/itmabcd1234</code></pre>
+<p>The bot reads the link, works out which product it points to, fetches the current price once, and replies with the starting point: what it costs now and the fact that watching has begun. From there it checks the price again every few hours, stores every reading, and stays silent while nothing changes. Silence is a feature. A tracker that pings you daily gets muted within a week.</p>
+<p>When the price drops, this is what arrives:</p>
+<pre><code>Price drop: boAt Airdopes 141 ANC
+Flipkart · Was ₹1,799 · Now ₹1,299 (down 28%)
+Lowest price in the last 60 days.</code></pre>
+<p>Three details in that message matter more than the drop itself. It names the store, because the same product often costs different amounts on Amazon and Flipkart on the same day. It shows the previous price, not an MRP. And it compares against the recorded history, so a drop back to the usual floor reads differently from a drop below anything seen before. Price rises get a shorter note, mostly so the history in the chat stays honest. I can also send <code>/list</code> to see everything being watched, and <code>/stop</code> with a link to retire a product I no longer care about.</p>
+<p>That is the entire interface. No app to install, no dashboard to log into, no settings page. Telegram is the screen, which is exactly why I keep building on it. My <a href="https://shubhranillayek.github.io/blog/how-to-build-a-telegram-bot-with-python/">guide to building a Telegram bot with Python</a> covers the basics of how bots like this one are set up, if you want the foundations first.</p>
+<h2>Inside the Bot: Four Jobs, One Small Program</h2>
+<p>Strip the project down and it does four jobs in a loop.</p>
+<p><strong>First, read the link.</strong> A product link is a messy thing: tracking parameters, shortened share links, app redirects. What the bot actually needs is a stable product ID. On Amazon that is the ASIN, the ten-character code sitting after <code>/dp/</code> in the URL. On Flipkart it is the item ID in the <code>/p/itm…</code> part of the path. Two small patterns pull those out:</p>
+<pre><code class="language-python">import re
+
+AMAZON_ID = re.compile(r"/(?:dp|gp/product)/([A-Z0-9]{10})")
+FLIPKART_ID = re.compile(r"/p/(itm[a-zA-Z0-9]+)")
+
+
+def parse_product_link(url: str) -&gt; tuple[str, str] | None:
+    &quot;&quot;&quot;Return (store, product_id) for a supported link, else None.&quot;&quot;&quot;
+    match = AMAZON_ID.search(url)
+    if match:
+        return &quot;amazon&quot;, match.group(1)
+    match = FLIPKART_ID.search(url)
+    if match:
+        return &quot;flipkart&quot;, match.group(1)
+    return None</code></pre>
+<p><strong>Second, fetch the price.</strong> A separate function per store takes the product ID and returns the current price, or nothing if the fetch failed. Keeping the stores apart matters, because the two sites could not be more different to work with, for reasons the harder section below explains.</p>
+<p><strong>Third, remember.</strong> Every reading goes into a small SQLite table: product, price, timestamp. SQLite sounds modest, and it is, and that is the compliment. One file, no server, and queries like "lowest price in 60 days" are a single line of SQL.</p>
+<p><strong>Fourth, compare and speak.</strong> A scheduled job walks the watchlist, fetches fresh prices, and compares each one with the last stored reading. Only a change earns a message. The tracking command and the scheduled check look like this:</p>
+<pre><code class="language-python">async def track(update: Update, context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    parsed = parse_product_link(context.args[0]) if context.args else None
+    if parsed is None:
+        await update.message.reply_text(&quot;Send an Amazon or Flipkart product link.&quot;)
+        return
+    store, product_id = parsed
+    price = fetch_price(store, product_id)
+    if price is None:
+        await update.message.reply_text(&quot;I could not read that price. Try again later.&quot;)
+        return
+    save_watch(update.effective_chat.id, store, product_id)
+    record_price(store, product_id, price)
+    await update.message.reply_text(
+        f&quot;Watching it on {store.title()}. Current price: ₹{price:,}. &quot;
+        &quot;I will message you when it moves.&quot;
+    )
+
+
+async def check_all(context: ContextTypes.DEFAULT_TYPE) -&gt; None:
+    for watch in all_watches():
+        price = fetch_price(watch.store, watch.product_id)
+        if price is None:
+            continue  # a failed fetch is not a price change
+        last = last_price(watch.store, watch.product_id)
+        record_price(watch.store, watch.product_id, price)
+        if last is not None and price &lt; last:
+            for chat_id in watchers_of(watch.store, watch.product_id):
+                await context.bot.send_message(
+                    chat_id,
+                    f&quot;Price drop on {watch.store.title()}: ₹{last:,} → ₹{price:,}&quot;,
+                )</code></pre>
+<p>The bot registers <code>check_all</code> with the library's job queue, set to repeat every few hours, and that is genuinely most of the program. Everything else is polish: friendly replies, the <code>/list</code> view, retrying a failed fetch once before giving up. If you have read my <a href="https://shubhranillayek.github.io/blog/whatsapp-alert-google-form-n8n/">WhatsApp form alert walkthrough</a>, the philosophy will look familiar: a small tool that watches one thing and speaks only when it matters.</p>
+<h2>How to Check Amazon Price History Before You Pay</h2>
+<p>You do not need my bot, or anyone's bot, to stop falling for the pre-sale lift. If you shop on Amazon, start here.</p>
+<p>Open the product in the Amazon app and scroll the listing. On a growing number of products, Amazon now shows a price history graph right on the page, with the recent low and high marked. It is the store grading its own homework, which is not ideal, but the graph still exposes the obvious cases: if the "sale" price sits inside the range the product has occupied for weeks, there is no sale. You are looking at the normal price with better marketing.</p>
+<p>Whether you use that graph or a tracker, judge a price against three numbers:</p>
+<ul>
+<li><strong>The 90-day low.</strong> If today's price is at or near the lowest of the last three months, it is a fair price. Buy without guilt.</li>
+<li><strong>The 90-day average.</strong> A price below the average is a decent deal. A price above it, during a sale, is a warning.</li>
+<li><strong>The launch price, for electronics.</strong> Phones and laptops slide down a fairly predictable slope after launch. A festival price that merely continues the slope is not a festival favour.</li>
+</ul>
+<p>One more habit costs nothing: check the same product on Flipkart before paying. The two stores take turns being cheaper, sometimes by a few hundred rupees on the same day, and neither will ever tell you that.</p>
+<h2>Flipkart Price History: The Same Trick on the Other App</h2>
+<p>Flipkart plays the identical game around the Big Billion Days, with one extra wrinkle: the price you see can depend on the delivery pincode, and some discounts only appear for specific locations or bank cards. A Flipkart price tracker has to fix a pincode and read the price the way a real buyer in that city would see it, or the history it builds mixes prices from different offers and means nothing.</p>
+<p>Checking Flipkart price history by hand is harder than on Amazon, because the app does not show a tidy history graph on most listings. Your options are to keep your own record (even a note in your phone, checked weekly, beats memory), or to use a tracker that has been watching the product for a few weeks before the sale begins. That last point is the one people miss: a tracker installed on the first day of the Big Billion Days knows nothing. The history has to exist before the banner goes up. Start watching in August for a sale that arrives in October, and the lift stands out immediately, because your own record shows the price climbing before it "falls".</p>
+<p>Bank offers deserve a cold eye too. "Extra 10% off with this card" is real money if you hold the card, but the base price it is calculated on is sometimes the lifted one. History first, offers second.</p>
+<h2>The Unglamorous Part: Stores Do Not Want to Be Tracked</h2>
+<p>Everything above is the easy half of this project. The hard half is getting the price in the first place, reliably, week after week. Anyone who has built a price tracker has a drawer full of scars here, so let me save you some time.</p>
+<p>Ask a store's website for prices too often, from the wrong kind of computer, and it stops answering. Requests from a rented server are the easiest traffic in the world to spot, and both Amazon and Flipkart spot them: robot checks, empty pages, requests that simply hang. A tracker that checks every product every five minutes from one server IP is not being thorough. It is digging its own grave, loudly.</p>
+<p>The official doors are narrower than people expect. Amazon used to offer a Product Advertising API for exactly this kind of thing. It was shut down in May 2026. Its replacement, the Creators API, is gated behind selling: you need at least ten qualifying sales in the last thirty days to keep access, which is a strange requirement for a tool whose job starts before anything is sold. Flipkart's affiliate API is older news: it has not accepted new signups since 2018. If you were not in before the door closed, you are not getting in.</p>
+<p>So what do working trackers actually do? Most buy their prices from services that fetch product data for a living. <a href="https://keepa.com/">Keepa</a> is the known name for Amazon: it keeps its own long price histories, which is why its charts go back years. For spot checks, pay-per-lookup data services like DataForSEO sell a single product price for a fraction of a paisa. Neither route is free at any real scale, and that cost shapes the whole design of a tracker, as the next section shows. My own bot, running for one person, could afford to be casual about all this. A public one cannot.</p>
+<h2>A Hundred People, One Phone, One Price Check</h2>
+<p>Here is the arithmetic that decides whether a tracker survives. Suppose a hundred people ask the bot to watch the same newly launched phone, which happens every single launch. The naive design fetches that phone's price a hundred times per round, once per person. The sane design fetches it once, stores the reading, and compares it against the watchlist of everyone tracking it.</p>
+<p>One product, one check, a hundred alerts when it moves. That single decision, called deduplication, cuts the fetching bill by orders of magnitude, and it is the difference between a hobby that costs a little and a hobby that costs a lot. The second decision is the interval. Prices on these stores change a few times a day at most, outside of sale chaos. Checking every few hours catches every real drop with time to spare. Checking every minute buys nothing and pays for it a thousand times over.</p>
+<p>I belabour this because most "build a price tracker" tutorials skip it, and then their readers wonder why the project got expensive or blocked within a month. The bot is the visible ten percent. The checking discipline is the rest of the iceberg.</p>
+<h2>Price Tracker Extension or Telegram Bot?</h2>
+<p>Browser extensions are the other popular shape for this tool, and people ask me which is better. Honest answer: they are good at different moments.</p>
+<table>
+<thead>
+<tr><th>Question</th><th>Browser extension</th><th>Telegram bot</th></tr>
+</thead>
+<tbody>
+<tr><td>Where does it live?</td><td>In your desktop browser, on the product page itself</td><td>In Telegram, on your phone, away from the store</td></tr>
+<tr><td>Price history</td><td>Chart drawn right under the price while you browse</td><td>Built from its own recorded checks, sent with each alert</td></tr>
+<tr><td>Alerts</td><td>Only when you revisit the page or open the browser</td><td>Push message the moment a check finds a drop</td></tr>
+<tr><td>Works for mobile shopping?</td><td>Poorly. Most Indian shopping happens in apps, where extensions cannot go</td><td>Yes. Send the link from the app's share button</td></tr>
+<tr><td>Stores covered</td><td>Usually one store per extension</td><td>Amazon and Flipkart in one place, in my build</td></tr>
+</tbody>
+</table>
+<p>If you shop at a desk, an extension is genuinely convenient, and the chart under the price is a nice piece of design. If you shop on your phone, which is most of India, the extension is furniture in a room you never enter. The bot follows you into the app era: copy link, send, forget, get tapped on the shoulder later. That is why I built the bot shape, and it is the shape I would build again.</p>
+<h2>Questions People Ask Me About This Bot</h2>
+<h3>Does one price tracker work for both Amazon and Flipkart?</h3>
+<p>Yes. The store is just a label on the record. Underneath, both sites reduce to the same job: take a product link, pull out a stable product ID, fetch the current price on a schedule, store it, and compare it with the last one. The fetching code differs per store, because the pages are built differently and Flipkart prices can change with the delivery pincode. The tracking, history and alerting code is shared.</p>
+<h3>How do I check the price history of a product on Amazon?</h3>
+<p>Open the product in the Amazon app and look for the price history graph on the listing, which shows recent lows and highs. If your listing does not show it, a tracker that has been recording the price for a few weeks gives you the same answer: compare today's price with the lowest price of the last 60 to 90 days, not with the struck-through MRP.</p>
+<h3>Are sale prices on Amazon and Flipkart real discounts?</h3>
+<p>Sometimes, and price history is how you tell. A common pattern is for the price to rise one or two weeks before a big sale, so the sale-day cut looks larger than it is. If the sale price is close to what the product sold for a month earlier, it is the normal price wearing a banner. A genuine deal sits clearly below the recent range.</p>
+<h3>How fast is a Telegram price drop alert?</h3>
+<p>As fast as the checking interval. My bot checked every few hours, so an alert could arrive up to one interval after the price changed. Checking every few minutes sounds better, but it multiplies the cost of fetching prices and annoys the stores' defences. For phones, appliances and most electronics, a few hours is fast enough, because real price drops usually stay live for at least a day.</p>
+<h3>Can I use this price tracker bot myself?</h3>
+<p>Not directly. I built it as a private project for my own use, so there is no public bot to join and no code repository for it. This post explains how it works in enough detail to build your own, and if you would rather have one built for your shop, channel or community, that is work I take on: my contact details are at the end of the post.</p>
+<h2>If You Want One Built</h2>
+<p>Price trackers are one member of a useful family: small bots that watch something and speak only when it changes. A shop owner might want the same pattern pointed at enquiries instead of prices. A deals channel might want drops collected and formatted for posting. A coaching centre might want a bot that answers the same ten questions so the phone stops ringing. The machinery in this post (a link or a question comes in, something is checked, a message goes out when it matters) covers all of those.</p>
+<p>I build bots like this as freelance work, from here in Durgapur, West Bengal. If you have a watcher, an alerter or an answerer in mind, write to me at <a href="mailto:subhralayek7@gmail.com">subhralayek7@gmail.com</a> with what it should do, and I will tell you plainly how I would build it and what it would take. More of my work is on <a href="https://github.com/shubhranillayek">GitHub</a>, and the rest of my writing is on the <a href="https://shubhranillayek.github.io/blog/">blog</a>.</p>
+<p>And if you came here only for the shopping trick, take the short version with you: never trust a discount you cannot compare against last month's price. The stores keep their history quiet. Keep your own.</p>
+
+</article></main>
+<footer><div class="wrap">Shubhranil Layek · Python developer · <a href="https://shubhranillayek.github.io/">Developer profile</a> · <a href="https://shubhranillayek.github.io/blog/">Blog</a> · <a href="https://github.com/shubhranillayek">GitHub and project source</a></div></footer>
+<script>
+(function(){
+  var btn=document.querySelector(".theme-switch");
+  if(!btn)return;
+  var root=document.documentElement;
+  function sync(){
+    var d=root.dataset.theme==="dark";
+    btn.setAttribute("aria-checked",d?"true":"false");
+    var m=document.querySelector('meta[name="theme-color"]');
+    if(m)m.setAttribute("content",d?"#1f1e1b":"#faf9f5");
+  }
+  sync();
+  btn.addEventListener("click",function(e){
+    var next=root.dataset.theme==="dark"?"light":"dark";
+    function apply(){
+      root.dataset.theme=next;
+      try{localStorage.setItem("theme",next);}catch(_){}
+      sync();
+    }
+    var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(document.startViewTransition&&!reduced){
+      var x=e.clientX||window.innerWidth-70;
+      var y=e.clientY||40;
+      var r=Math.hypot(Math.max(x,window.innerWidth-x),Math.max(y,window.innerHeight-y));
+      var vt=document.startViewTransition(apply);
+      vt.ready.then(function(){
+        root.animate(
+          {clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},
+          {duration:750,easing:"ease-in-out",pseudoElement:"::view-transition-new(root)"}
+        );
+      }).catch(function(){});
+    }else{
+      root.classList.add("theming");
+      apply();
+      setTimeout(function(){root.classList.remove("theming");},500);
+    }
+  });
+})();
+</script>
+<script>
+(function(){var bar=document.getElementById("scrollProgressBar");if(!bar)return;function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+"%";}document.addEventListener("scroll",upd,{passive:true});upd();})();
+</script>
+</body>
+</html>
